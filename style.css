@@ -1,13 +1,25 @@
 :root {
-  /* Font size variables */
-  --smaller: 0.56405026;
-  --small: 0.7518797rem;
-  --regular: 1rem;
-  --medium: 1.333rem;
-  --large: 1.77rem;
-  --larger: 2.369rem;
-  --largest: 3.157rem;
-  --largest-xl: 4.209rem;
+  /* Size Variables */
+  --smallest: 0.42314348em
+  --smaller: 0.56405026em;
+  --small: 0.7518797em;
+  --regular: 1em;
+  --medium: 1.333em;
+  --large: 1.77em;
+  --larger: 2.369em;
+  --largest: 3.157em;
+  --largest-xl: 4.209em;
+
+  /* Font Size Variables */
+  --f__smallest: 0.42314348rem
+  --f__smaller: 0.56405026rem;
+  --f__small: 0.7518797rem;
+  --f__regular: 1rem;
+  --f__medium: 1.333rem;
+  --f__large: 1.77rem;
+  --f__larger: 2.369rem;
+  --f__largest: 3.157rem;
+  --f__largest-xl: 4.209rem;
 
   /* Color Scheme */
   --primary: #333333;
@@ -17,17 +29,26 @@
   --grey__2: #e0e0e0;
   --grey__3: #f2f2f2;
   --accent: #eb5757;
+  --accent__access: #C04646;
   --link: #2f80ed;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+html {
+  height: 100%;
 }
 
 body {
   font-family: "Bodoni Moda", serif;
   font-family: "Jost", sans-serif;
+  font-size: 1em;
   justify-content: center;
-  padding: 0em 7em;
+  padding: 0em;
+  margin: 0em;
   color: var(--primary);
-  display: flex;
-  /* margin: auto; */
+  padding: 1em 7em;
+  /* display: flex; */
 }
 
 /* ***********************************************************************************************
@@ -37,30 +58,30 @@ body {
 /* 1. Headings */
 
 h1 {
-  font-size: var(--largest-xl); /* 67.34px */
+  font-size: var(--f__largest-xl); /* 67.34px */
   font-weight: 500;
   margin-top: 0;
   margin-bottom: calc(var(--regular) / var(--medium));
 }
 h2 {
-  font-size: var(--largest); /* 50.52px */
+  font-size: var(--f__largest); /* 50.52px */
   margin-top: 0;
   margin-bottom: 1rem;
   margin-bottom: calc(var(--regular) / var(--medium));
 }
 h3 {
-  font-size: var(--larger); /* 37.90px */
+  font-size: var(--f__larger); /* 37.90px */
   margin-top: 0;
   margin-bottom: calc(var(--regular) / var(--xl-large));
 }
 h4 {
-  font-size: var(--large); /* 28.43px */
+  font-size: var(--f__large); /* 28.43px */
   margin-top: 0;
   margin-bottom: 1rem;
   margin-bottom: calc(var(--regular) / var(--large));
 }
 h5 {
-  font-size: var(--medium); /* 21.33px */
+  font-size: var(--f__medium); /* 21.33px */
   margin-top: 0;
   margin-bottom: 1rem;
   margin-bottom: calc(var(--regular) / var(--medium));
@@ -69,32 +90,184 @@ h5 {
 /* 2. Paragraphs */
 
 p {
-  font-size: var(--regular); /* 16.00px */
+  font-size: var(--f__regular); /* 16.00px */
   margin-top: 0;
 }
+
+/* Hyper Link */
+
+a {
+  color: var(--accent__access);
+}
+
+
 /* ***********************************************************************************************
 ******************************************** ELEMENTS ********************************************
 *************************************************************************************************/
-/*
 
-hr {
-border-top: 1px solid var(--grey__2);
+/* Lists */
+
+ol, ul {
+  margin-top: 0;
+  padding: 0;
+  list-style:none;
+}
+/* .container {
+  margin: 0em auto;
+  width: 75em;
+} */
+
+
+/*************************************************************************************************
+***************************************** NAVIGATION HEADER  **************************************
+*************************************************************************************************/
+
+/* Skip to main content ACCESSIBILITY */
+.skip-nav-link {
+  position: absolute;
+  transform: translateY(-150%);
+  transition: transform 325ms ease-in-out;
+  background: var(--accent__access);
+  color: var(--white);
+  padding: var(--small) var(--large);
+  border-radius: var(--smaller);
+  left: var(--small);
+  border-color: var(--black);
 }
 
-**************************************************************************************************
+.skip-nav-link:focus {
+  transform: translateY(var(--largest));
+}
+/* Header */
+
+header {
+  overflow: hidden;
+}
+
+/* Navigation Bar */
+
+#top-header {
+  text-align: center;
+  height: 3.75em;
+}
+
+/* *************
+*********** Logo **********
+***************** */
+
+#logo {
+  float: left;
+  padding: none;
+  margin: none;
+  height: 2.064375em;
+  /* width: 30%; */
+  width: 16%;
+  display: flex;
+  /* height: auto; */
+  /* height: 60px; */
+}
+
+#logo-text {
+  float: left;
+  justify-content: center;
+  padding: none;
+  margin-top: 0.31672285em;
+  height: auto;
+  min-width: fit-content;
+}
+
+#logo img {
+  width: 2.064375em;
+  height: auto;
+  float: left;
+  padding: 0.625em 0em;
+}
+
+#logo-text img {
+  min-width: fit-content;
+}
+
+/* *************
+*********** Navigation MENU **********
+***************** */
+
+#menu {
+  float: right;
+  width: 70%
+  height: 100%;
+  margin: none;
+}
+
+#menu ul {
+  text-align: center;
+  float: right;
+  margin: none;
+  background: transparent;
+}
+
+#menu li {
+  display: inline-block;
+  padding: none;
+  margin: none;
+}
+
+#menu li a, #menu li span {
+  display: inline-block;
+  padding: 0em 1.5em;
+  text-decoration: none;
+  font-weight: medium;
+  line-height: 3.75em;
+}
+
+#menu li a {
+  color: var(--primary);
+}
+
+#menu li:hover a, #menu li span {
+  background: var(--accent);
+  color: var(--white);
+  /* border-left: 1px solid var(--accent__access); */
+  text-decoration: none;
+  font-weight: medium;
+  transform: translateY(var(smallest));
+}
+
+/* *************
+*********** HERO Header Title **********
+***************** */
+
+/* #header-image-menu {
+  position: relative;
+  top: 0.625em;
+} */
+
+#header-image-menu img {
+  width: 100%;
+  margin: none;
+  padding: none;
+}
+
+/* #image-text {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  text-align: center;
+  transform: translate (-30%, -30%);
+} */
+
+/*************************************************************************************************
 ***************************************** FEATURE - TAB-BAR **************************************
 *************************************************************************************************/
 
 .tab-bar {
   display: flex;
   flex-direction: row;
-  font-size: var(--medium);
-  /* justify-content: space-between; */
+  font-size: var(--f__medium);
 }
 
 .tab-bar__item {
   padding-right: 1rem;
-  font-size: var(--medium);
+  font-size: var(--f__medium);
   font-weight: normal;
 }
 
@@ -233,52 +406,16 @@ border-top: 1px solid var(--grey__2);
     margin-bottom: var(--smaller);
 }
 .txt-medium {
-    font-size: var(--medium);
+    font-size: var(--f__medium);
 }
 .txt-muted {
     color: var(--secondary);
 }
 .rcp__tag {
-    font-size: var(--small);
+    font-size: var(--f__small);
     text-transform: uppercase;
     color: var(--grey__1);
     letter-spacing: var(--smaller);
     font-weight: bold;
     margin: var(--regular) 0 0 0;
 }
-
-/* .hero-pro__text-section,
-.pro-text__1,
-.pro-text__2,
-.hero-pro__text-section__footer {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem 0 1rem;
-} */
-
-/* .hero-pro__text-section {
-  background-color: var(--grey__3);
-  padding-top: 1rem;
-} */
-
-/* Text Section About The Featured Recipe */
-/* .pro-text__1 {
-  margin-bottom: var(--small);
-} */
-
-/* Recipe from collection */
-/* .pro-text__2 {
-  /* display: flex; */
-  margin-bottom: var(--medium);
-} */
-
-/* .hero-pro__text-section__recipe-links {
-  display: flex;
-  flex-direction: column;
-} */
-
-/* Footer of text-section */
-/* .hero-pro__text-section__footer {
-  display: flex;
-  flex-direction: row;
-} */
