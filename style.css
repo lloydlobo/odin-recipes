@@ -135,6 +135,7 @@ border-top: 1px solid var(--grey__2);
   width: 100%;
   flex-shrink: 0;
 }
+
 /* ****************************************
 ******** 2. Hero Promo Text **************
 **************************************** */
@@ -171,3 +172,113 @@ border-top: 1px solid var(--grey__2);
   display: flex;
   flex-direction: row;
 }
+
+/* ************************************************************************************************
+******************************************* RECIPE LAYOUT *******************************************
+************************************************************************************************ */
+
+/* 4 Containers */
+.rcp-1 {
+}
+.rcp-2 {
+}
+.rcp-3 {
+}
+.rcp-4 {
+}
+
+/* ****************************************
+******** 1. Recipe Image **************
+**************************************** */
+
+/* Recipe Promo__Container */
+
+.recipe-layout__item {
+  display: inline-flex;
+  margin-top: var(--medium);
+  justify-content: space-between;
+  gap: var(--medium);
+}
+
+/* Recipe__Promo Image__Container */
+.rcp-1__image {
+  display: flex;
+  height: 10.125em;
+  max-width: 50.8125em;
+  /* object-fit: cover; */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Recipe__Promo Image__Styling */
+.rcp-promo__image {
+  height: auto;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* ****************************************
+******** 2. Recipe Promo Text **************
+**************************************** */
+
+.rcp__text-section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey__3);
+    padding: var(--regular) var(--regular) 0 var(--regular);
+    height: 6.875em;
+}
+.txt-medium, .txt-muted, .rcp__tag {
+    margin-bottom: var(--smaller);
+}
+.txt-medium {
+    font-size: var(--medium);
+}
+.txt-muted {
+    color: var(--secondary);
+}
+.rcp__tag {
+    font-size: var(--small);
+    text-transform: uppercase;
+    color: var(--grey__1);
+    letter-spacing: var(--smaller);
+    font-weight: bold;
+    margin: var(--regular) 0 0 0;
+}
+
+/* .hero-pro__text-section,
+.pro-text__1,
+.pro-text__2,
+.hero-pro__text-section__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0 1rem;
+} */
+
+/* .hero-pro__text-section {
+  background-color: var(--grey__3);
+  padding-top: 1rem;
+} */
+
+/* Text Section About The Featured Recipe */
+/* .pro-text__1 {
+  margin-bottom: var(--small);
+} */
+
+/* Recipe from collection */
+/* .pro-text__2 {
+  /* display: flex; */
+  margin-bottom: var(--medium);
+} */
+
+/* .hero-pro__text-section__recipe-links {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* Footer of text-section */
+/* .hero-pro__text-section__footer {
+  display: flex;
+  flex-direction: row;
+} */
