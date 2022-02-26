@@ -1,4 +1,173 @@
+:root {
+  /* Font size variables */
+  --smaller: 0.56405026;
+  --small: 0.7518797rem;
+  --regular: 1rem;
+  --medium: 1.333rem;
+  --large: 1.77rem;
+  --larger: 2.369rem;
+  --largest: 3.157rem;
+  --largest-xl: 4.209rem;
+
+  /* Color Scheme */
+  --primary: #333333;
+  --secondary: #4f4f4f;
+  --tertiary: #828282;
+  --grey__1: #bdbdbd;
+  --grey__2: #e0e0e0;
+  --grey__3: #f2f2f2;
+  --accent: #eb5757;
+  --link: #2f80ed;
+}
+
 body {
   font-family: "Bodoni Moda", serif;
   font-family: "Jost", sans-serif;
+  justify-content: center;
+  padding: 0em 7em;
+  color: var(--primary);
+  display: flex;
+  /* margin: auto; */
+}
+
+/* ***********************************************************************************************
+******************************************* FONTS ************************************************
+*************************************************************************************************/
+
+/* 1. Headings */
+
+h1 {
+  font-size: var(--largest-xl); /* 67.34px */
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: calc(var(--regular) / var(--medium));
+}
+h2 {
+  font-size: var(--largest); /* 50.52px */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-bottom: calc(var(--regular) / var(--medium));
+}
+h3 {
+  font-size: var(--larger); /* 37.90px */
+  margin-top: 0;
+  margin-bottom: calc(var(--regular) / var(--xl-large));
+}
+h4 {
+  font-size: var(--large); /* 28.43px */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-bottom: calc(var(--regular) / var(--large));
+}
+h5 {
+  font-size: var(--medium); /* 21.33px */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-bottom: calc(var(--regular) / var(--medium));
+}
+
+/* 2. Paragraphs */
+
+p {
+  font-size: var(--regular); /* 16.00px */
+  margin-top: 0;
+}
+/* ***********************************************************************************************
+******************************************** ELEMENTS ********************************************
+*************************************************************************************************/
+/*
+
+hr {
+border-top: 1px solid var(--grey__2);
+}
+
+**************************************************************************************************
+***************************************** FEATURE - TAB-BAR **************************************
+*************************************************************************************************/
+
+.tab-bar {
+  display: flex;
+  flex-direction: row;
+  font-size: var(--medium);
+  /* justify-content: space-between; */
+}
+
+.tab-bar__item {
+  padding-right: 1rem;
+  font-size: var(--medium);
+  font-weight: normal;
+}
+
+.active {
+  font-weight: bold;
+}
+
+/* ************************************************************************************************
+******************************************* HERO PROMO *******************************************
+************************************************************************************************ */
+
+/* ****************************************
+******** 1. Hero Promo Image **************
+**************************************** */
+
+/* Hero Promo__Container */
+
+.hero-promo {
+  display: inline-flex;
+  margin-top: var(--medium);
+  /* flex-direction: column; */
+}
+
+/* Promo Image__Container */
+.hero-promo__image {
+  display: flex;
+  height: 28.25em;
+  max-width: 50.8125em;
+  /* object-fit: cover; */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Promo Image__Styling */
+.promo__image {
+  height: auto;
+  width: 100%;
+  flex-shrink: 0;
+}
+/* ****************************************
+******** 2. Hero Promo Text **************
+**************************************** */
+.hero-pro__text-section,
+.pro-text__1,
+.pro-text__2,
+.hero-pro__text-section__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0 1rem;
+}
+
+.hero-pro__text-section {
+  background-color: var(--grey__3);
+  padding-top: 1rem;
+}
+
+/* Text Section About The Featured Recipe */
+.pro-text__1 {
+  margin-bottom: var(--small);
+}
+/* Recipe from collection */
+.pro-text__2 {
+  /* display: flex; */
+  margin-bottom: var(--medium);
+}
+
+.hero-pro__text-section__recipe-links {
+  display: flex;
+  flex-direction: column;
+}
+/* Footer of text-section */
+.hero-pro__text-section__footer {
+  display: flex;
+  flex-direction: row;
 }
