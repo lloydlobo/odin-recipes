@@ -132,7 +132,6 @@ ol, ul {
   color: var(--white);
   padding: var(--small) var(--large);
   border-radius: var(--smaller);
-  left: var(--small);
   border-color: var(--black);
 }
 
