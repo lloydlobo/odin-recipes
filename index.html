@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Odin recipes</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
   <script src="/js/script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,41 +17,40 @@
     crossorigin="anonymous" />
 </head>
 
-<body>
+<body class="home">
   <!-- Skip Navigation Hidden -->
   <a href="#main-content" class="skip-nav-link">Skip to main content</a>
   <!-- Toggle High Contrast -->
-  <a href="#" class="a11y__hc">Toggle High Contrast</a>
+  <!-- <a href="#" class="a11y__hc">Toggle High Contrast</a> -->
   <!-- Header Menu of the Page -->
-  <header>
-    <div class="" id="top-header">
-      <div id="logo">
-        <a href="#"><img src="./images/OR-Logo__lloydlobo.com-20220226180536.png" alt="Odin Recipes" /></a>
-        <a href="#"><img id="logo-text" src="./images/OR-Logo-Text__lloydlobo.com-20220226204333.png"
-            alt="Odin Recipes" /></a>
-        <!-- <h5>Odin Recipes</h5> -->
-      </div>
-      <!-- Navigation -->
-      <nav aria-label="Primary Navigation">
-        <div id="menu" role="navigation">
-          <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Recipes</a></li>
-            <li><a href="#">Stories</a></li>
-            <li><a href="#">Chefs</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+  <header class="primary-header flex">
+    <div>
+      <a href="#"><img src="./images/OR-Logo-Text__lloydlobo.com-20220226204333.png" alt="odin recipes"
+          class="logo" /></a>
     </div>
-    <!-- Image menu in Header to contain an Image and Text over that image -->
-    <!-- <div class="" id="header-image-menu">
-        <img src="" alt="" />
-        <h1 id="image-text" alt="Recipes"></h1>
-      </div> -->
+    <!-- Add Button to disappear the nav on smaller screens-->
+    <!-- sr-only is for screen readers only - they can see the button saying "Menu" -->
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+    </button>
+    <!-- Navigation -->
+    <nav aria-label="Primary Navigation">
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+        <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-s" href="/index.html"><span
+              aria-hidden="true">00</span>Home</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-s" href="/pages/about.html"><span
+              aria-hidden="true">01</span>About</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-s" href="/pages/recipes.html"><span
+              aria-hidden="true">02</span>Recipes</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-s" href="/pages/stories.html"><span
+              aria-hidden="true">03</span>Stories</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-s" href="/pages/chefs.html"><span
+              aria-hidden="true">04</span>Chefs</a></li>
+        <li><a class="ff-sans-cond uppercase text-white letter-spacing-s" href="/pages/contact.html"><span
+              aria-hidden="true">05</span>Contact</a></li>
+      </ul>
+    </nav>
   </header>
-
   <!-- MAIN -->
   <main id="main-content">
     <section class="container" id="section-1">
