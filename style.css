@@ -40,7 +40,7 @@ html {
 }
 
 body {
-  font-family: "Jost", "Bodoni Moda", sans-serif;
+  font-family: "Jost", Helvetica, Garamond, "Bodoni Moda", Arial, sans-serif;
   font-size: 1em;
   justify-content: center;
   padding: 0em;
@@ -48,6 +48,11 @@ body {
   color: var(--primary);
   padding: 1.333em 7em;
   /* display: flex; */
+}
+
+/* ! Box Model  (KEEP DISABLED) */
+* {
+  /* border: 2px solid red; */
 }
 
 /* ***********************************************************************************************
