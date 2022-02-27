@@ -38,6 +38,16 @@
   --link: #2f80ed;
   --white: #ffffff;
   --black: #000000;
+
+  /* Social Color Schemes */
+  --facebook: #3b5998;
+  --instagram__grd: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  --instagram: #e1306c;
+  --linkedin: #0077b5;
+  --pinterest: #bd081c;
+  --twitter: #00acee;
+  --youtube: #ff0000;
+
 }
 
 html {
@@ -514,38 +524,54 @@ footer {
 
 .footer__social-icons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }
 
-.footer__contact {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-evenly; */
-  /* min-width: fit-content; */
-  /* padding: 0 1.5em; */
+.footer__social-icons i {
+  padding: var(--smaller);
+  text-shadow: 0 var(--smallest) var(--smaller) rgba(0, 0, 0, 0.6);
+  transition: all ease-in-out 150ms;
+}
+/* Instagram */
+.footer__social-icons a:nth-child(1) {
+  color: var(--instagram);
+  /* background: var(--instagram__grd); */
+}
+/* Twitter */
+.footer__social-icons a:nth-child(2) {
+  color: var(--twitter);
+}
+/* Facebook */
+.footer__social-icons a:nth-child(3) {
+  color: var(--facebook);
+}
+/* Pinterest */
+.footer__social-icons a:nth-child(4) {
+  color: var(--pinterest);
 }
 
-.footer__contact li a, .footer__contact li span {
+.footer__social-icons i:hover {
+  margin-top: calc(var(--tiniest) * -1);
+  text-shadow: 0 var(--small) var(--smaller) rgba(0, 0, 0, 0.2);
+}
+
+/* .footer__social-icons li a, .footer__social-icons li span {
   display: inline-block;
   padding: 0 1.5em;
   text-decoration: none;
   font-weight: medium;
-  /* line-height: 3.75em; */
-}
+} */
 
-.footer__contact li a {
-  /* color: var(--primary); */
-}
 
-.footer__contact li:hover a, .footer__contact li span {
+/* .footer__social-icons li:hover a, .footer__social-icons li span {
   background: var(--accent);
   color: var(--white);
-  /* border-left: 1px solid var(--accent__access); */
   text-decoration: none;
   font-weight: medium;
-  /* transform: translateY(var(smallest)); */
   border-radius: var(--smallest);
-}
+} */
 .copyright {
   display: flex;
   flex-direction: row;
@@ -567,9 +593,14 @@ color: var(--primary);
 p.copyright__text {
 margin-bottom: 0;
 }
-.copyright #logo img {
+.copyright #logo__footer img {
   margin-right: var(--smallest);
   padding: 0;
   position: relative;
+  float: left;
+  padding: none;
+  margin: none;
+  height: 2.064375em;
+  display: flex;
 }
 
