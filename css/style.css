@@ -70,29 +70,29 @@ body {
   line-height: 1.3;
   min-height: 100vh;
 
-  display: grid;
-  grid-template-rows: min-content 1fr;
+  /* display: grid; */
+  /* grid-template-rows: min-content 1fr; */
 
   overflow-x: hidden;
 }
 
 /* make images easier to work with */
-img,
+/* img,
 picture {
   max-width: 100%;
   display: block;
-}
+} */
 
 /* make form elements easier to work with */
-input,
+/* input,
 button,
 textarea,
 select {
   font: inherit;
-}
+} */
 
 /* remove animations for people who've turned it off */
-@media (prefers0reduced-motion: reduce) {
+/* @media (prefers0reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -101,12 +101,12 @@ select {
     transition-duration: 0.01s !important;
     scroll-behavior: auto !important;
   }
-}
+} */
 
 /* ! box model  (keep it disabled) */
-* {
-  /* border: 2px solid red; */
-}
+/* * {
+  border: 2px solid red;
+} */
 
 /* ***********************************************************************************************
 ******************************************* FONTS ************************************************
@@ -198,55 +198,53 @@ hr {
 
 /* general */
 
+/* `--gap` isn't defined in the `:root` so if the value falls back the value next to the `,` will take it's place i.e. 1rem in this case */
 .flex {
   display: flex;
-  gap: var(--gap, 1rem); /* `--gap` isn't defined in the `:root` so if the value falls back the value next to the `,` will take it's place i.e. 1rem in this case */
+  gap: var(--gap, 1rem);
 }
 
-.grid {
+/* .grid {
   display: grid;
   gap: var(--gap, 1em);
-}
+} */
 
-.d-block {
+/* .d-block {
   display: block;
-}
+} */
 
-.flow > *:where(:not(:first-child)) {
+/* .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow--space, 1rem);
-}
+} */
 
-.container {
+/* .container {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 88em;
-}
+} */
 
-.grid-container {
+/* .grid-container {
   max-width: 50ch;
-}
+} */
 
-@media (min-width: 45em) {
+/* @media (min-width: 45em) {
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 1rem);
     grid-template-column: minmax(1rem, 1fr) repeat(2 1rem, 1fr
     );
   }
-
   .grid-container > *:first-child {
     grid-column: 2;
   }
-
   .grid-container > *:last-child {
     grid-column: 3;
   }
-
   .grid-container--home {
     padding-bottom: max(6rem, 20vh);
     align-items: end;
   }
-}
+} */
 
 .sr-only {
   position: absolute;
