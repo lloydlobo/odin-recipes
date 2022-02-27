@@ -219,6 +219,10 @@ header {
 *********** Navigation MENU **********
 ***************** */
 
+div#menu {
+    font-size: var(--f__small);
+}
+
 #menu {
   float: right;
   width: 70%
@@ -546,7 +550,7 @@ footer {
 }
 
 .copyright__text {
-  font-size: .75rem;
+  font-size: var(--f__small);
   padding: 0 var(--smallest);
   color: var(--primary);
 }
