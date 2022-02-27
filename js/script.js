@@ -1,4 +1,4 @@
-const critical = require("critical");
+const critical = require('critical')
 
 critical.generate({
   // Inline the generated critical-path CSS
@@ -7,16 +7,16 @@ critical.generate({
   inline: true,
 
   // Your base directory
-  base: "dist/",
+  base: 'dist/',
 
   // HTML source
-  html: "<html>...</html>",
+  html: '<html>...</html>',
 
   // HTML source file
-  src: "index.html",
+  src: 'index.html',
 
   // Your CSS Files (optional)
-  css: ["dist/style.css"],
+  css: ['dist/style.css'],
 
   // Viewport width
   width: 1300,
@@ -26,9 +26,9 @@ critical.generate({
 
   // Output results to file
   target: {
-    css: "critical.css",
-    html: "index-critical.html",
-    uncritical: "uncritical.css",
+    css: 'critical.css',
+    html: 'index-critical.html',
+    uncritical: 'uncritical.css'
   },
 
   // Extract inlined styles from referenced stylesheets
@@ -36,8 +36,8 @@ critical.generate({
 
   // ignore CSS rules
   ignore: {
-    atrule: ["@font-face"],
+    atrule: ['@font-face'],
     rule: [/some-regexp/],
-    decl: (node, value) => /big-image\.png/.test(value),
-  },
-});
+    decl: (node, value) => /big-image\.png/.test(value)
+  }
+})
