@@ -120,7 +120,7 @@ p {
 
 /* Hyper Link */
 
-a:link {
+a {
   color: var(--accent__access);
   text-decoration: none;
 }
@@ -129,7 +129,7 @@ a:visited {
   color: var(--accent__access__visited);
 }
 
-a:hover {
+a:hover, a:focus {
 color: var(--accent);
 }
 
