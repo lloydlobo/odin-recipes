@@ -1,6 +1,6 @@
 :root {
   /* Size Variables */
-  --smallest: 0.42314348em
+  --smallest: 0.42314348em;
   --smaller: 0.56405026em;
   --small: 0.7518797em;
   --regular: 1em;
@@ -46,7 +46,7 @@ body {
   padding: 0em;
   margin: 0em;
   color: var(--primary);
-  padding: 1em 7em;
+  padding: 1.333em 7em;
   /* display: flex; */
 }
 
@@ -118,6 +118,14 @@ ol, ul {
   width: 75em;
 } */
 
+/* Horizontal Line hr */
+
+hr {
+  /* border-color: var(--grey__3); */
+  /* border-color: #e0e0e0; */
+  border-color: var(--tertiary);
+  opacity: .2;
+}
 
 /*************************************************************************************************
 ***************************************** NAVIGATION HEADER  **************************************
@@ -136,12 +144,13 @@ ol, ul {
 }
 
 .skip-nav-link:focus {
-  transform: translateY(var(--largest));
+  transform: translateY(var(--largest-xl));
 }
 /* Header */
 
 header {
   overflow: hidden;
+  padding: var(--smaller) var(--smallest);
 }
 
 /* Navigation Bar */
@@ -266,13 +275,25 @@ header {
 }
 
 .tab-bar__item {
-  padding-right: 1rem;
+  margin-right: 1rem;
   font-size: var(--f__medium);
   font-weight: normal;
 }
 
-.active {
+.tab-bar__item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tab-bar__item:hover {
+  border-bottom: .25em solid var(--accent__access);
+
+
+}
+.tab-bar__item.active {
   font-weight: bold;
+  border-bottom: .25em solid var(--accent__access);
+
 }
 
 /* ************************************************************************************************
