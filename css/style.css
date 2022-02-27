@@ -48,7 +48,7 @@ body {
   font-family: "Jost", Helvetica, Garamond, "Bodoni Moda", Arial, sans-serif;
   font-size: 1em;
   justify-content: center;
-  margin: 0em;
+  margin: 0;
   color: var(--primary);
   padding: 1.333em 7em;
   /* display: flex; */
@@ -208,7 +208,7 @@ header {
   width: 2.064375em;
   height: auto;
   float: left;
-  padding: 0.625em 0em;
+  padding: 0.625em 0;
 }
 
 #logo-text img {
@@ -245,7 +245,7 @@ div#menu {
 
 #menu li a, #menu li span {
   display: inline-block;
-  padding: 0em 1.5em;
+  padding: 0 1.5em;
   text-decoration: none;
   font-weight: medium;
   line-height: 3.75em;
@@ -527,7 +527,7 @@ footer {
 
 .footer__contact li a, .footer__contact li span {
   display: inline-block;
-  padding: 0em 1.5em;
+  padding: 0 1.5em;
   text-decoration: none;
   font-weight: medium;
   /* line-height: 3.75em; */
