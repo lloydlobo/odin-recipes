@@ -606,12 +606,10 @@ p.copyright__text {
 margin-bottom: 0;
 }
 .copyright #logo__footer img {
-  margin-right: var(--smallest);
+  margin: 0 var(--smallest) 0 0;
   padding: 0;
   position: relative;
   float: left;
-  padding: none;
-  margin: none;
   height: 2.064375em;
   display: flex;
 }
