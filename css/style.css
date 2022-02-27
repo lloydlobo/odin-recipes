@@ -3,27 +3,27 @@
   --tiniest: 0.23636817em;
   --tinier: 0.31507877em
   --tiny: 0.31507877em
-  --smallest: 0.42314348em;
-  --smaller: 0.56405026em;
-  --small: 0.7518797em;
-  --regular: 1em;
-  --medium: 1.333em;
-  --large: 1.77em;
-  --larger: 2.369em;
-  --largest: 3.157em;
-  --largest-xl: 4.209em;
+  --s__100: 0.42314348em;
+  --s__200: 0.56405026em;
+  --s__300: 0.7518797em;
+  --s__400: 1em;
+  --s__500: 1.333em;
+  --s__600: 1.77em;
+  --s__700: 2.369em;
+  --s__800: 3.157em;
+  --s__900: 4.209em;
 
   /* Font Size Variables */
-  --f__smallest: 0.42314348rem
-  --f__smaller: 0.56405026rem;
-  --f__small: 0.7518797rem;
-  --f__nav: 0.926875rem;
-  --f__regular: 1rem;
-  --f__medium: 1.333rem;
-  --f__large: 1.77rem;
-  --f__larger: 2.369rem;
-  --f__largest: 3.157rem;
-  --f__largest-xl: 4.209rem;
+  --fs__100: 0.42314348rem
+  --fs__200: 0.56405026rem;
+  --fs__300: 0.7518797rem;
+  --fs__nav: 0.926875rem;
+  --fs__400: 1rem;
+  --fs__500: 1.333rem;
+  --fs__600: 1.77rem;
+  --fs__700: 2.369rem;
+  --fs__800: 3.157rem;
+  --fs__900: 4.209rem;
 
   /* Color Scheme */
   --primary: #333333;
@@ -53,23 +53,57 @@
   --twitter: #00acee;
   --youtube: #ff0000;
 
+  /* Font Family */
+  --ff-sans-normal: "Jost", Helvetica, Garamond, "Bodoni Moda", Arial, sans-serif;
 }
 
 html {
   height: 100%;
 }
 
+/* set up the body */
 body {
-  font-family: "Jost", Helvetica, Garamond, "Bodoni Moda", Arial, sans-serif;
-  font-size: 1em;
-  justify-content: center;
-  margin: 0;
+  font-family: var(--ff-sans-normal);
+  font-size: var(--fs__400);
   color: var(--primary);
-  padding: 1.333em 7em;
-  /* display: flex; */
+  background-color: var(--white);
+  line-height: 1.3;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
 }
 
-/* ! Box Model  (KEEP DISABLED) */
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned it off */
+@media (prefers0reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ! box model  (keep it disabled) */
 * {
   /* border: 2px solid red; */
 }
@@ -81,39 +115,39 @@ body {
 /* 1. Headings */
 
 h1 {
-  font-size: var(--f__largest-xl); /* 67.34px */
+  font-size: var(--fs__900); /* 67.34px */
   font-weight: 500;
   margin-top: 0;
-  margin-bottom: calc(var(--regular) / var(--medium));
+  margin-bottom: calc(var(--s__400) / var(--s__900));
 }
 h2 {
-  font-size: var(--f__largest); /* 50.52px */
+  font-size: var(--fs__800); /* 50.52px */
   margin-top: 0;
   margin-bottom: 1rem;
-  margin-bottom: calc(var(--regular) / var(--medium));
+  margin-bottom: calc(var(--s__400) / var(--s__800));
 }
 h3 {
-  font-size: var(--f__larger); /* 37.90px */
+  font-size: var(--fs__700); /* 37.90px */
   margin-top: 0;
-  margin-bottom: calc(var(--regular) / var(--xl-large));
+  margin-bottom: calc(var(--s__400) / var(--s__700));
 }
 h4 {
-  font-size: var(--f__large); /* 28.43px */
+  font-size: var(--fs__600); /* 28.43px */
   margin-top: 0;
   margin-bottom: 1rem;
-  margin-bottom: calc(var(--regular) / var(--large));
+  margin-bottom: calc(var(--s__400) / var(--s__600));
 }
 h5 {
-  font-size: var(--f__medium); /* 21.33px */
+  font-size: var(--fs__500); /* 21.33px */
   margin-top: 0;
   margin-bottom: 1rem;
-  margin-bottom: calc(var(--regular) / var(--medium));
+  margin-bottom: calc(var(--s__400) / var(--s__500));
 }
 
 /* 2. Paragraphs */
 
 p {
-  font-size: var(--f__regular); /* 16.00px */
+  font-size: var(--fs__400); /* 16.00px */
   margin-top: 0;
   color: var(--primary);
 }
@@ -159,6 +193,89 @@ hr {
 }
 
 /*************************************************************************************************
+*****************************************  UTILITY CLASSES **************************************
+*************************************************************************************************/
+
+/* general */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem); /* `--gap` isn't defined in the `:root` so if the value falls back the value next to the `,` will take it's place i.e. 1rem in this case */
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1em);
+}
+
+.d-block {
+  display: block;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow--space, 1rem);
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 88em;
+}
+
+.grid-container {
+  max-width: 50ch;
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+    text-align: left;
+    column-gap: var(--container-gap, 1rem);
+    grid-template-column: minmax(1rem, 1fr) repeat(2 1rem, 1fr
+    );
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* colors */
+
+.bg-dark {
+  background-color: var(--primary)
+}
+
+.bg-accent {
+  background-color: var(--grey__3)
+}
+
+.bg-white {
+  background-color: var(--white)
+}
+
+/* timestamp 30:55 - responsive navbar tutorial using html css & js - speed - 0.25 */
+/*************************************************************************************************
 ***************************************** NAVIGATION HEADER  **************************************
 *************************************************************************************************/
 
@@ -170,13 +287,13 @@ hr {
   transition: transform 325ms ease-in-out;
   background: var(--accent__access);
   color: var(--white);
-  padding: var(--small) var(--large);
-  border-radius: var(--smaller);
+  padding: var(--s__300) var(--s__600);
+  border-radius: var(--s__200);
   border-color: var(--black);
 }
 
 .skip-nav-link:focus {
-  transform: translateY(var(--largest-xl));
+  transform: translateY(var(--s__900));
 }
 
 /* <!-- Header Menu of the Page --> */
@@ -185,129 +302,116 @@ hr {
 }
 
 .a11y__hc:focus {
-  transform: translateY(var(--largest-xl));
+  transform: translateY(var(--s__900));
 }
 /* Header */
 
-header {
-  overflow: hidden;
-  padding: var(--smaller) var(--smallest);
+    /* header {
+      overflow: hidden;
+      padding: var(--s__200) var(--s__100);
+    } */
+
+/* *********** *********** ************/
+/* *********** primary header ***********  */
+/* *********** *********** ************/
+.logo {
+  margin: 2rem;
 }
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+
+}
+.primary-navigation {
+  /* general reset */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  background: hsl(0 0% 100% / 0.0999999);
+  /* backdrop-filter: blur(1em); */
+}
+
+/* support works like media-queries - for firefox and edge */
+@supports (backdrop-filter: blur(1em)) {
+  .primary-navigation {
+    background: hsl(0 0% 100% / 0.099999);
+    backdrop-filter: blur(1em);
+  }
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > [aria-hidden="true"] {
+  font-weight: bold;
+  margin-inline-end: 0.75em; /* left and right for multilingual */
+  /* display: none; */
+}
+/* This is an exception - use min-width for most cases -- because this had a lot of moving elements */
+@media (max-width: 35em) {
+  .primary-navigation {
+    --gap: 3em;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    /* .primry n-navigation class in html  lready has a class "flex" on it so you can use flex direction here */
+    flex-direction: column;
+    padding: min(30vh, 10em) 2em;
+    /* inset is like shorthand for margin */
+
+    transform: translateX(50%);
+  }
+
+  /* from data atributes in html & data-visibility navToggle in js */
+  .primary-navigation[data-visibile="true"] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url("../assets/icon-hamburger-menu.png");
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 10em;
+    border: 0;
+    aspect-ratio: 1 ;
+    top: 4em;
+    right: 0.05em;
+    background-size: 2em;
+  }
+}
+
 
 /* Navigation Bar */
 
-#top-header {
-  text-align: center;
-  height: 3.75em;
-}
+
 
 /* *************
 *********** Logo **********
 ***************** */
 
-#logo {
-  float: left;
-  padding: none;
-  margin: none;
-  height: 2.064375em;
-  /* width: 30%; */
-  width: 16%;
-  display: flex;
-  /* height: auto; */
-  /* height: 60px; */
-}
 
-#logo-text {
-  float: left;
-  justify-content: center;
-  padding: none;
-  margin-top: 0.31672285em;
-  height: auto;
-  min-width: fit-content;
-}
-
-#logo img {
-  width: 2.064375em;
-  height: auto;
-  float: left;
-  padding: 0.625em 0;
-}
-
-#logo-text img {
-  min-width: fit-content;
-}
 
 /* *************
 *********** Navigation MENU **********
 ***************** */
 
-div#menu {
-    font-size: var(--f__nav);
-}
 
-#menu {
-  float: right;
-  width: 70%;
-  height: 100%;
-  margin: none;
-}
-
-#menu ul {
-  text-align: center;
-  float: right;
-  margin: none;
-  background: transparent;
-}
-
-#menu li {
-  display: inline-block;
-  padding: none;
-  margin: none;
-}
-
-#menu li a, #menu li span {
-  display: inline-block;
-  padding: 0 1.5em;
-  text-decoration: none;
-  font-weight: medium;
-  line-height: 3.75em;
-}
-
-#menu li a {
-  color: var(--primary);
-}
-
-#menu li:hover a, #menu li span {
-  background: var(--accent);
-  color: var(--white);
-  text-decoration: none;
-  font-weight: medium;
-  transform: translateY(var(smallest));
-  /* border-left: 1px solid var(--accent__access); */
-}
 
 /* *************
 *********** HERO Header Title **********
 ***************** */
 
-/* #header-image-menu {
-  position: relative;
-  top: 0.625em;
-} */
-
-#header-image-menu img {
-  width: 100%;
-  margin: none;
-  padding: none;
-}
-
-/* #image-text {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  text-align: center;
-  transform: translate (-30%, -30%);
-} */
 
 /*************************************************************************************************
 *****************************************  SECTIONS **************************************
@@ -332,12 +436,12 @@ section#section-3 {
 .tab-bar {
   display: flex;
   flex-direction: row;
-  font-size: var(--f__medium);
+  font-size: var(--fs__500);
 }
 
 .tab-bar__item {
   margin-right: 1rem;
-  font-size: var(--f__medium);
+  font-size: var(--fs__500);
   font-weight: normal;
 }
 
@@ -369,7 +473,7 @@ section#section-3 {
 
 .hero-promo {
   display: inline-flex;
-  margin-top: var(--medium);
+  margin-top: var(--s__500);
   /* flex-direction: column; */
 }
 
@@ -410,12 +514,12 @@ section#section-3 {
 
 /* Text Section About The Featured Recipe */
 .pro-text__1 {
-  margin-bottom: var(--small);
+  margin-bottom: var(--s__300);
 }
 /* Recipe from collection */
 .pro-text__2 {
   /* display: flex; */
-  margin-bottom: var(--medium);
+  margin-bottom: var(--s__500);
 }
 
 .hero-pro__text-section__recipe-links {
@@ -455,9 +559,9 @@ box-shadow:
 
 .recipe-layout__item {
   display: inline-flex;
-  margin-top: var(--medium);
+  margin-top: var(--s__500);
   justify-content: space-between;
-  gap: var(--medium);
+  gap: var(--s__500);
 }
 
 /* Recipe__Promo Image__Container */
@@ -486,26 +590,26 @@ box-shadow:
     display: flex;
     flex-direction: column;
     background-color: var(--grey__3);
-    padding: var(--regular) var(--regular) 0 var(--regular);
+    padding: var(--s__400) var(--s__400) 0 var(--s__400);
     height: 6.875em;
 }
 .txt-medium, .txt-muted, .rcp__tag {
-    margin-bottom: var(--smaller);
+    margin-bottom: var(--s__200);
 }
 .txt-medium {
-    font-size: var(--f__medium);
-    margin-bottom: var(--tiniest);
+    font-size: var(--fs__500);
+    margin-bottom: var(--s__100);
 }
 .txt-muted {
     color: var(--secondary);
 }
 .rcp__tag {
-    font-size: var(--f__small);
+    font-size: var(--fs__300);
     text-transform: uppercase;
     color: var(--grey);
     letter-spacing: 0.1rem;
     font-weight: normal;
-    margin: var(--small) 0 var(--regular);
+    margin: var(--s__300) 0 var(--s__400);
 }
 
 /* ************************************************************************************************
@@ -531,7 +635,7 @@ footer {
 }
 
 .footer__links a {
-  padding: var(--regular);
+  padding: var(--s__400);
 }
 
 .footer__social-icons {
@@ -539,12 +643,12 @@ footer {
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-bottom: var(--regular);
+  margin-bottom: var(--s__400);
 }
 
 .footer__social-icons i {
-  padding: 0 var(--medium);
-  text-shadow: 0 var(--smallest) var(--smaller) rgba(0, 0, 0, 0.6);
+  padding: 0 var(--s__500);
+  text-shadow: 0 var(--s__100) var(--s__200) rgba(0, 0, 0, 0.6);
   transition: all ease-in-out 150ms;
 }
 /* Instagram */
@@ -566,8 +670,8 @@ footer {
 }
 
 .footer__social-icons i:hover {
-  margin-top: calc(var(--tiniest) * -1);
-  text-shadow: 0 var(--small) var(--smaller) rgba(0, 0, 0, 0.2);
+  margin-top: calc(var(--s__100) * -1);
+  text-shadow: 0 var(--s__300) var(--s__200) rgba(0, 0, 0, 0.2);
 }
 
 /* .footer__social-icons li a, .footer__social-icons li span {
@@ -583,7 +687,7 @@ footer {
   color: var(--white);
   text-decoration: none;
   font-weight: medium;
-  border-radius: var(--smallest);
+  border-radius: var(--s__100);
 } */
 .copyright {
   display: flex;
@@ -594,8 +698,8 @@ footer {
 }
 
 .copyright__text {
-  font-size: var(--f__small);
-  padding: 0 var(--smallest);
+  font-size: var(--fs__300);
+  padding: 0 var(--s__100);
   color: var(--primary);
 }
 
@@ -607,7 +711,7 @@ p.copyright__text {
 margin-bottom: 0;
 }
 .copyright #logo__footer img {
-  margin: 0 var(--smallest) 0 0;
+  margin: 0 var(--s__100) 0 0;
   padding: 0;
   position: relative;
   float: left;
