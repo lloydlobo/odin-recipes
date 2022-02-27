@@ -17,6 +17,7 @@
   --f__smallest: 0.42314348rem
   --f__smaller: 0.56405026rem;
   --f__small: 0.7518797rem;
+  --f__nav: 0.926875rem;
   --f__regular: 1rem;
   --f__medium: 1.333rem;
   --f__large: 1.77rem;
@@ -220,7 +221,7 @@ header {
 ***************** */
 
 div#menu {
-    font-size: var(--f__small);
+    font-size: var(--f__nav);
 }
 
 #menu {
