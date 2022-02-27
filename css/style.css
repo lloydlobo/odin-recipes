@@ -38,6 +38,7 @@
   --accent__access: #C04646;
   --accent__access__complementary-light: #12732E;
   --accent__access__complementary-dark: #45BF67;
+  --accent__access__visited: #A63C3C;
   --accent__active: #ff0000;
   --link: #2f80ed;
   --white: #ffffff;
@@ -125,7 +126,7 @@ a:link {
 }
 
 a:visited {
-  color: var(--accent__access__complementary-dark);
+  color: var(--accent__access__visited);
 }
 
 a:hover {
