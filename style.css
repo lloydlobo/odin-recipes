@@ -511,8 +511,30 @@ footer {
   /* transform: translateY(var(smallest)); */
   border-radius: var(--smallest);
 }
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
 
 .copyright__text {
   font-size: .75rem;
+  padding: 0 var(--smallest);
+  color: var(--primary);
+}
+
+a.copyright__text {
+color: var(--primary);
+}
+
+p.copyright__text {
+margin-bottom: 0;
+}
+.copyright #logo img {
+  margin-right: var(--smallest);
+  padding: 0;
+  position: relative;
 }
 
