@@ -34,7 +34,11 @@
   --grey__2: #e0e0e0;
   --grey__3: #f2f2f2;
   --accent: #eb5757;
+  --accent__complementary: #57EB81;
   --accent__access: #C04646;
+  --accent__access__complementary-light: #12732E;
+  --accent__access__complementary-dark: #45BF67;
+  --accent__active: #ff0000;
   --link: #2f80ed;
   --white: #ffffff;
   --black: #000000;
@@ -115,15 +119,22 @@ p {
 
 /* Hyper Link */
 
-a {
+a:link {
   color: var(--accent__access);
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--accent__access__complementary-dark);
 }
 
 a:hover {
 color: var(--accent);
 }
 
+a:active {
+  color: var(--accent__active);
+}
 /* ***********************************************************************************************
 ******************************************** ELEMENTS ********************************************
 *************************************************************************************************/
@@ -527,10 +538,11 @@ footer {
   justify-content: center;
   align-items: center;
   height: auto;
+  margin-bottom: var(--regular);
 }
 
 .footer__social-icons i {
-  padding: var(--smaller);
+  padding: 0 var(--medium);
   text-shadow: 0 var(--smallest) var(--smaller) rgba(0, 0, 0, 0.6);
   transition: all ease-in-out 150ms;
 }
