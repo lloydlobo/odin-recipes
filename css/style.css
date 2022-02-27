@@ -469,10 +469,10 @@ section#section-3 {
 .rcp__tag {
     font-size: var(--f__small);
     text-transform: uppercase;
-    color: var(--grey__1);
+    color: var(--grey);
     letter-spacing: 0.1rem;
-    font-weight: bold;
-    margin: var(--regular) 0 0 0;
+    font-weight: normal;
+    margin: var(--small) 0 var(--regular);
 }
 
 /* ************************************************************************************************
