@@ -1,0 +1,1 @@
+const critical = require("critical");
