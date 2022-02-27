@@ -132,7 +132,8 @@ hr {
 *************************************************************************************************/
 
 /* Skip to main content ACCESSIBILITY */
-.skip-nav-link {
+.skip-nav-link,
+.a11y__hc {
   position: absolute;
   transform: translateY(-150%);
   transition: transform 325ms ease-in-out;
@@ -144,6 +145,15 @@ hr {
 }
 
 .skip-nav-link:focus {
+  transform: translateY(var(--largest-xl));
+}
+
+/* <!-- Header Menu of the Page --> */
+.a11y__hc {
+  /* transform: transform 1000ms ease-in-out !important; */
+}
+
+.a11y__hc:focus {
   transform: translateY(var(--largest-xl));
 }
 /* Header */
@@ -436,7 +446,7 @@ header {
     font-size: var(--f__small);
     text-transform: uppercase;
     color: var(--grey__1);
-    letter-spacing: var(--smaller);
+    letter-spacing: 0.1rem;
     font-weight: bold;
     margin: var(--regular) 0 0 0;
 }
@@ -505,3 +515,4 @@ footer {
 .copyright__text {
   font-size: .75rem;
 }
+
