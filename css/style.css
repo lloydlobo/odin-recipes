@@ -77,22 +77,22 @@ body {
 }
 
 /* make images easier to work with */
-/* img,
+img,
 picture {
   max-width: 100%;
   display: block;
-} */
+}
 
 /* make form elements easier to work with */
-/* input,
+input,
 button,
 textarea,
 select {
   font: inherit;
-} */
+}
 
 /* remove animations for people who've turned it off */
-/* @media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -101,7 +101,7 @@ select {
     transition-duration: 0.01s !important;
     scroll-behavior: auto !important;
   }
-} */
+}
 
 /* ! box model  (keep it disabled) */
 /* * {
@@ -113,35 +113,34 @@ select {
 *************************************************************************************************/
 
 /* 1. Headings */
+h1, h2, h3, h4, h5 {
+  margin-top: 0;
+  font-weight: bold;
+}
 
 h1 {
   font-size: var(--fs__900); /* 67.34px */
   font-weight: 500;
-  margin-top: 0;
   margin-bottom: calc(var(--s__400) / var(--s__900));
 }
 h2 {
   font-size: var(--fs__800); /* 50.52px */
-  margin-top: 0;
   margin-bottom: 1rem;
   margin-bottom: calc(var(--s__400) / var(--s__800));
 }
 h3 {
   font-size: var(--fs__700); /* 37.90px */
-  margin-top: 0;
   margin-bottom: calc(var(--s__400) / var(--s__700));
   line-height: 1.2;
 }
 h4 {
   font-size: var(--fs__600); /* 28.43px */
-  margin-top: 0;
   margin-bottom: 1rem;
   margin-bottom: calc(var(--s__400) / var(--s__600));
   line-height: 1.1;
 }
 h5 {
   font-size: var(--fs__500); /* 21.33px */
-  margin-top: 0;
   margin-bottom: 1rem;
   margin-bottom: calc(var(--s__400) / var(--s__500));
 }
@@ -191,7 +190,7 @@ ol, ul {
 /* Horizontal Line hr */
 
 hr {
-  border: 0.03125em solid var(--grey__3);
+  border: 0.5px solid var(--grey__3);
 }
 
 /*************************************************************************************************
@@ -206,10 +205,10 @@ hr {
   gap: var(--gap, 1rem);
 }
 
-/* .grid {
+.grid {
   display: grid;
   gap: var(--gap, 1em);
-} */
+}
 
 /* .d-block {
   display: block;
@@ -249,7 +248,7 @@ hr {
   }
 } */
 
-/* .sr-only {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -259,11 +258,11 @@ hr {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-} */
+}
 
 /* colors */
 
-/* .bg-dark {
+.bg-dark {
   background-color: var(--primary)
 }
 .bg-accent {
@@ -271,9 +270,10 @@ hr {
 }
 .bg-white {
   background-color: var(--white)
-} */
+}
 
 /* timestamp 30:55 - responsive navbar tutorial using html css & js - speed - 0.25 */
+
 /*************************************************************************************************
 ***************************************** NAVIGATION HEADER  **************************************
 *************************************************************************************************/
@@ -303,16 +303,11 @@ hr {
 .a11y__hc:focus {
   transform: translateY(var(--s__900));
 }
-/* Header */
-
-    /* header {
-      overflow: hidden;
-      padding: var(--s__200) var(--s__100);
-    } */
 
 /* *********** *********** ************/
 /* *********** primary header ***********  */
 /* *********** *********** ************/
+
 .logo {
   margin: 2rem;
 }
@@ -337,12 +332,12 @@ hr {
 }
 
 /* support works like media-queries - for firefox and edge */
-/* @supports (backdrop-filter: blur(1em)) {
+@supports (backdrop-filter: blur(1em)) {
   .primary-navigation {
     background: hsl(0 0% 100% / 0.099999);
     backdrop-filter: blur(1em);
   }
-} */
+}
 
 .primary-navigation a {
   text-decoration: none;
@@ -363,18 +358,18 @@ hr {
     inset: 0 0 0 30%;
     /* .primry n-navigation class in html  lready has a class "flex" on it so you can use flex direction here */
     flex-direction: column;
-    padding: min(30vh, 10em) 2em;
+    padding: min(30vh, 10em) var(--s__600);
     /* inset is like shorthand for margin */
 
+    /* set to 100% after testing */
     transform: translateX(100%);
   }
 
   /* from data atributes in html & data-visibility navToggle in js */
-  .primary-navigation[data-visibile="true"] {
-    transform: translateX(0%);
+  .primary-navigation['data-visibile="true"'] {
+    transform: translateX(0%) !important;
   }
-
-  /* .mobile-nav-toggle */ {
+  .mobile-nav-toggle {
     display: block;
     position: absolute;
     z-index: 9999;
@@ -384,12 +379,16 @@ hr {
     height: 10em;
     border: 0;
     aspect-ratio: 1 ;
-    top: 4em;
-    right: 0.05em;
+    top: 2em;
+    right: 2em;
     background-size: 2em;
   }
 }
 
+.active {
+  font-weight: bolder;
+  border-bottom: solid var(--accent__access);
+}
 
 /* Navigation Bar */
 
@@ -588,7 +587,7 @@ box-shadow:
 }
 
 /* Recipe__Promo Image__Container */
-.rcp-1__image {
+.rcp__image {
   display: flex;
   height: 10.125em;
   max-width: 50.8125em;
@@ -615,6 +614,16 @@ box-shadow:
     background-color: var(--grey__3);
     padding: var(--s__400) var(--s__400) 0 var(--s__400);
     height: 6.875em;
+}
+
+/* use pseudo selector to style in a manageble way */
+.rcp__text-section :is(h3, :p, :txt-muted, :.rcp__tag) {
+  color: var(--accent__access);
+}
+
+:is(div.recipe-layout__item, .txt-medium, .rcp__tag, .txt-muted) p:hover {
+  /* color: yellow; */
+  font-weight: 500;
 }
 .txt-medium, .txt-muted, .rcp__tag {
     margin-bottom: var(--s__200);
