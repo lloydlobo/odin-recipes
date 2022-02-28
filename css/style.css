@@ -349,25 +349,32 @@ hr {
 }
 
 /* This is an exception - use min-width for most cases -- because this had a lot of moving elements */
-@media (max-width: 35em) {
+/* 600px Golden */
+@media only screen and (max-width: 37.5em) {
   .primary-navigation {
-    --gap: 3em;
+    --gap: 2em;
 
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 30%;
+    /* toggle inset with js instead of translate */
+    inset: 0 0 0 38.2%;
     /* .primry n-navigation class in html  lready has a class "flex" on it so you can use flex direction here */
     flex-direction: column;
     padding: min(30vh, 10em) var(--s__600);
     /* inset is like shorthand for margin */
 
     /* set to 100% after testing */
+    /* transform: translateX(38.2%); */
     transform: translateX(100%);
   }
+  /* .primary-navigation[data-visibile="false"] {
+    transform: translateX(100%);
+  } */
 
   /* from data atributes in html & data-visibility navToggle in js */
-  .primary-navigation['data-visibile="true"'] {
-    transform: translateX(0%) !important;
+  .primary-navigation[data-visibile="true"] {
+    transform: translateX(0%);
+
   }
   .mobile-nav-toggle {
     display: block;
