@@ -67,11 +67,11 @@ body {
   font-size: var(--fs__400);
   color: var(--primary);
   background-color: var(--white);
-  line-height: 1.3;
+  line-height: 1.5;
   min-height: 100vh;
-
-  /* display: grid; */
-  /* grid-template-rows: min-content 1fr; */
+  /* padding: 0.5vw 7vw; */
+  display: grid;
+  grid-template-rows: min-content 1fr;
 
   overflow-x: hidden;
 }
@@ -92,7 +92,7 @@ select {
 } */
 
 /* remove animations for people who've turned it off */
-/* @media (prefers0reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -130,12 +130,14 @@ h3 {
   font-size: var(--fs__700); /* 37.90px */
   margin-top: 0;
   margin-bottom: calc(var(--s__400) / var(--s__700));
+  line-height: 1.2;
 }
 h4 {
   font-size: var(--fs__600); /* 28.43px */
   margin-top: 0;
   margin-bottom: 1rem;
   margin-bottom: calc(var(--s__400) / var(--s__600));
+  line-height: 1.1;
 }
 h5 {
   font-size: var(--fs__500); /* 21.33px */
@@ -217,6 +219,7 @@ hr {
   margin-top: var(--flow--space, 1rem);
 } */
 
+/* error here with section element */
 /* .container {
   padding-inline: 2em;
   margin-inline: auto;
@@ -246,7 +249,7 @@ hr {
   }
 } */
 
-.sr-only {
+/* .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -254,23 +257,21 @@ hr {
   margin: -1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
   border: 0;
-}
+} */
 
 /* colors */
 
-.bg-dark {
+/* .bg-dark {
   background-color: var(--primary)
 }
-
 .bg-accent {
   background-color: var(--grey__3)
 }
-
 .bg-white {
   background-color: var(--white)
-}
+} */
 
 /* timestamp 30:55 - responsive navbar tutorial using html css & js - speed - 0.25 */
 /*************************************************************************************************
@@ -336,12 +337,12 @@ hr {
 }
 
 /* support works like media-queries - for firefox and edge */
-@supports (backdrop-filter: blur(1em)) {
+/* @supports (backdrop-filter: blur(1em)) {
   .primary-navigation {
     background: hsl(0 0% 100% / 0.099999);
     backdrop-filter: blur(1em);
   }
-}
+} */
 
 .primary-navigation a {
   text-decoration: none;
@@ -350,8 +351,8 @@ hr {
 .primary-navigation a > [aria-hidden="true"] {
   font-weight: bold;
   margin-inline-end: 0.75em; /* left and right for multilingual */
-  /* display: none; */
 }
+
 /* This is an exception - use min-width for most cases -- because this had a lot of moving elements */
 @media (max-width: 35em) {
   .primary-navigation {
@@ -365,7 +366,7 @@ hr {
     padding: min(30vh, 10em) 2em;
     /* inset is like shorthand for margin */
 
-    transform: translateX(50%);
+    transform: translateX(100%);
   }
 
   /* from data atributes in html & data-visibility navToggle in js */
@@ -373,11 +374,11 @@ hr {
     transform: translateX(0%);
   }
 
-  .mobile-nav-toggle {
+  /* .mobile-nav-toggle */ {
     display: block;
     position: absolute;
     z-index: 9999;
-    background: url("../assets/icon-hamburger-menu.png");
+    background: url("/assets/icon-hamburger-menu.png");
     background-repeat: no-repeat;
     width: 2rem;
     height: 10em;
@@ -469,10 +470,14 @@ section#section-3 {
 
 /* Hero Promo__Container */
 
+section {
+  overflow: hidden;
+}
+
 .hero-promo {
-  display: inline-flex;
+  display: flex;
   margin-top: var(--s__500);
-  /* flex-direction: column; */
+  flex-direction: row;
 }
 
 /* Promo Image__Container */
@@ -484,6 +489,19 @@ section#section-3 {
   overflow: hidden;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 35em) {
+.hero-promo {
+  display: flex;
+  margin-top: 0;
+  flex-direction: column;
+}
+
+.hero-promo__image {
+  max-width: clamp(10.8125em 10vw 30em);
+
+}
 }
 
 /* Promo Image__Styling */
@@ -556,10 +574,17 @@ box-shadow:
 /* Recipe Promo__Container */
 
 .recipe-layout__item {
-  display: inline-flex;
+  display: flex;
   margin-top: var(--s__500);
   justify-content: space-between;
   gap: var(--s__500);
+}
+
+@media (max-width: 35em) {
+
+  .recipe-layout__item {
+    flex-direction: column;
+  }
 }
 
 /* Recipe__Promo Image__Container */
@@ -622,7 +647,32 @@ footer {
   border-top: 1px solid #eee;
   margin-top: 1.7689em;
   padding-top: 1em;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
   /* flex: auto; */
+}
+@media (max-width: 35em) {
+  footer{
+    display: grid;
+    /* flex-direction: row; */
+  }
+  footer .footer__links {
+    display: block;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    /* margin-top: 1.7689em 0; */
+    /* padding: 1em 0; */
+  }
+    footer .footer__social-icons {
+      display: block;
+      align-items: left;
+      padding: 0;
+      margin: 0 2em;
+      /* flex-direction: column; */
+  }
+
 }
 
 .footer__links {
