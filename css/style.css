@@ -312,13 +312,18 @@ hr {
   /* top: 2em; */
   margin: 1.66em 0;
   height: auto;
-  width: 11em;
+  width: 12.6em;
   justify-content: center;
 }
 
 .primary-header {
   align-items: center;
   justify-content: space-between;
+}
+
+
+.nav-item {
+  font-size: var(--fs__300);
 }
 
 .mobile-nav-toggle {
