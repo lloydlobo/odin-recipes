@@ -292,7 +292,7 @@ hr {
 }
 
 .skip-nav-link:focus {
-  transform: translateY(var(--s__900));
+  transform: translateY(var(--s__900));a
 }
 
 /* <!-- Header Menu of the Page --> */
@@ -309,7 +309,11 @@ hr {
 /* *********** *********** ************/
 
 .logo {
-  margin: 2rem;
+  /* top: 2em; */
+  margin: 1.66em 0;
+  height: auto;
+  width: 11em;
+  justify-content: center;
 }
 
 .primary-header {
