@@ -163,6 +163,8 @@ p {
   font-size: var(--fs__400); /* 16.00px */
   margin-top: 0;
   color: var(--primary);
+  max-width: 48ch;
+  min-width: 12ch;
 }
 
 /* Hyper Link */
@@ -351,8 +353,9 @@ header a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5em;
-  /* padding: 0; */
+  /* padding: 0 1.5em; */
+  padding: 0;
+  padding-right: 5px;
 }
 
 .navbar__nav-menu {
@@ -369,6 +372,16 @@ header a {
 .navbar__nav-menu__nav-link {
   transition: 0.7s ease;
   color: var(--accent);
+  /* font-size: clamp(var(--fs__200), 1rem -10vw, var(--fs__300)); */
+  font-size: calc(var(--fs__300) + 0.11vw);
+}
+/* ** ** ** */
+/* ** navbar logo ** */
+/* ** ** ** */
+
+.navbar__logo {
+  max-width: 11em;
+  height: auto;
 }
 
 /* ** ** ** */
@@ -475,18 +488,16 @@ button.navbar__hamburger {
 *****************************************  SECTIONS **************************************
 *************************************************************************************************/
 
-section#section-1 {
-  display: flex;
-  flex-direction: column;
+
+section {
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-section#section-2 {
-  display: flex;
-}
 
-section#section-3 {
-    display: flex;
-}
 /*************************************************************************************************
 ***************************************** FEATURE - TAB-BAR **************************************
 *************************************************************************************************/
