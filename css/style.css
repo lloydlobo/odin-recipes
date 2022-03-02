@@ -817,8 +817,9 @@ color: var(--primary);
 p.copyright__text {
 margin-bottom: 0;
 }
-.copyright #logo__footer img {
+.copyright .logo__footer img {
   margin: 0 var(--s__100) 0 0;
+  /* padding: 0 var(--s__100); */
   padding: 0;
   position: relative;
   float: left;
