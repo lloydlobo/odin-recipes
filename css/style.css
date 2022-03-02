@@ -76,6 +76,7 @@ body {
   /* grid-template-rows: min-content 1fr; */
 
   overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* make images easier to work with */
@@ -311,119 +312,151 @@ hr {
 /* *********** primary header ***********  */
 /* *********** *********** ************/
 
-.logo {
-  /* top: 2em; */
-  margin: 1.66em 0;
-  height: auto;
-  width: 12.6em;
-  justify-content: center;
+/* **** **** **** */
+/* **** navigation **** */
+/* **** **** **** */
+
+/* *** header *** */
+header {
+  background-color: var(--white);
 }
 
-.primary-header {
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-.nav-item {
-  font-size: var(--fs__300);
-}
-
-.mobile-nav-toggle {
-  display: none;
-
-}
-.primary-navigation {
-  /* general reset */
+header li {
   list-style: none;
-  padding: 0;
-  margin: 0;
-
-  background: hsl(0 0% 100% / 0.0999999);
-  /* backdrop-filter: blur(1em); */
 }
 
-/* support works like media-queries - for firefox and edge */
-@supports (backdrop-filter: blur(1em)) {
-  .primary-navigation {
-    background: hsl(0 0% 100% / 0.099999);
-    backdrop-filter: blur(1em);
-  }
+header a {
+  color: var(--accent__access);
 }
 
-.primary-navigation a {
-  text-decoration: none;
+/* ** ** ** */
+/* ** navbar ** */
+/* ** ** ** */
+.navbar__nav-menu__nav-item a {
+  color: var(--accent__access);
 }
 
-.primary-navigation a > [aria-hidden="true"] {
-  font-weight: bold;
-  margin-inline-end: 0.75em; /* left and right for multilingual */
+.navbar {
+  min-height: 4.37em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
+  /* padding: 0; */
 }
 
-/* This is an exception - use min-width for most cases -- because this had a lot of moving elements */
-/* 600px Golden */
-@media only screen and (max-width: 37.5em) {
-  .primary-navigation {
-    --gap: 2em;
+.navbar__nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.75em;
+}
 
-    position: fixed;
-    z-index: 1000;
-    /* toggle inset with js instead of translate */
-    inset: 0 0 0 38.2%;
-    /* .primry n-navigation class in html  lready has a class "flex" on it so you can use flex direction here */
-    flex-direction: column;
-    padding: min(30vh, 10em) var(--s__600);
-    /* inset is like shorthand for margin */
+.navbar__nav-branding {
+  font-size: var(--fs__600);
+}
 
-    /* set to 100% after testing */
-    /* transform: translateX(38.2%); */
-    transform: translateX(100%);
-  }
-  /* .primary-navigation[data-visibile="false"] {
-    transform: translateX(100%);
-  } */
+.navbar__nav-menu__nav-link {
+  transition: 0.7s ease;
+}
 
-  /* from data atributes in html & data-visibility navToggle in js */
-  .primary-navigation[data-visibile="true"] {
-    transform: translateX(0%);
+.navbar__nav-menu__nav-link {
+  color: var(--accent);
+}
 
-  }
-  .mobile-nav-toggle {
+/* ** ** ** */
+/* ** navbar hamburger icon ** */
+/* ** ** ** */
+
+button.navbar__hamburger {
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+.navbar__hamburger__bar {
+  display: block;
+  width: var(--s__600);
+  height: 3px;
+  background-color: var(--black);
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* * * * */
+/* * responsive navbar hamburger menu * */
+/* * * * */
+
+@media (max-width: 48em) {
+
+  button.navbar__hamburger {
     display: block;
-    position: absolute;
-    z-index: 9999;
-    background: url("/assets/icon-hamburger-menu.png");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 10em;
-    border: 0;
-    aspect-ratio: 1 ;
-    top: 2em;
-    right: 2em;
-    background-size: 2em;
+  }
+
+  .navbar__hamburger {
+    display: block;
+    position: relative;
+    /* left: 61.80%; */
+    /* right: -61.80%; */
+    overflow: hidden;
+  }
+
+  /* ! [ ] create .active class in javascript --> script.js */
+  .navbar__hamburger.active .navbar__hamburger__bar:nt-child(2) {
+    opacity: 0;
+  }
+  .navbar__hamburger.active .navbar__hamburger__bar:nt-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar__hamburger.active .navbar__hamburger__bar:nt-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* * nav-menu styling: position to hide * */
+  .navbar__nav-menu {
+    position: fixed;
+    flex-direction: column;
+    top: 4.375em;
+    /* right: 0; */
+    gap: 0;
+    background-color: hsl(22 100% 100% / 1);
+    background: hsl(0 0% 100% / 0.1);
+
+    /* ! ** hide it from view ** */
+    right: -100%;
+
+    /* ** let the menu take the whole screen ** */
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1000;
+
+  }
+
+  @supports (backdrop-filter: blur(1em)) {
+    .navbar__nav-menu {
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1.618em);
+    }
+  }
+
+  /* ** don't want menu to appear close to each other ** */
+  .navbar__nav-menu__nav-item {
+    margin: 1em 0;
+  }
+  .navbar__nav-menu__nav-item {
+    color: var(--accent__access);
+  }
+
+  /* ! [ ] activate with javascript --> script.js */
+  .navbar__nav-menu.active {
+    right: 0em;
+    top: 4.375em;
+    padding-bottom: 10em;
   }
 }
-
-.active {
-  font-weight: bolder;
-  border-bottom: solid var(--accent__access);
-}
-
-/* Navigation Bar */
-
-
-
-/* *************
-*********** Logo **********
-***************** */
-
-
-
-/* *************
-*********** Navigation MENU **********
-***************** */
-
-
 
 /* *************
 *********** HERO Header Title **********
@@ -457,7 +490,7 @@ section#section-3 {
 }
 
 .tab-bar__item {
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   font-size: var(--fs__500);
   font-weight: normal;
 }
