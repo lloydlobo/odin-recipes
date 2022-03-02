@@ -76,7 +76,8 @@ body {
   /* grid-template-rows: min-content 1fr; */
 
   overflow-x: hidden;
-  overflow: hidden;
+  /* ! remove overflow: hidden; from body and html to avoid interruption to scrolling */
+  /* overflow: hidden; */
 }
 
 /* make images easier to work with */
@@ -196,7 +197,7 @@ hr {
   border: 0.5px solid var(--grey__3);
 }
 
-/*************************************************************************************************
+/* * ***********************************************************************************************
 *****************************************  UTILITY CLASSES **************************************
 *************************************************************************************************/
 
