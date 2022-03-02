@@ -278,9 +278,9 @@ hr {
 
 /* timestamp 30:55 - responsive navbar tutorial using html css & js - speed - 0.25 */
 
-/*************************************************************************************************
-***************************************** NAVIGATION HEADER  **************************************
-*************************************************************************************************/
+/* * ********************************************************************************************* */
+/* * *************************************** navigation header  ********************************** */
+/* * ********************************************************************************************* */
 
 /* Skip to main content ACCESSIBILITY */
 .skip-nav-link,
@@ -308,13 +308,13 @@ hr {
   transform: translateY(var(--s__900));
 }
 
-/* *********** *********** ************/
-/* *********** primary header ***********  */
-/* *********** *********** ************/
+/* * ********** *********** ********** */
+/* * ********** primary header **********  */
+/* * ********** *********** ********** */
 
-/* **** **** **** */
-/* **** navigation **** */
-/* **** **** **** */
+/* * **** **** **** */
+/* * **** navigation **** */
+/* * **** **** **** */
 
 /* *** header *** */
 header {
@@ -329,9 +329,10 @@ header a {
   color: var(--accent__access);
 }
 
-/* ** ** ** */
-/* ** navbar ** */
-/* ** ** ** */
+/* * ** ** ** */
+/* * ** navbar ** */
+/* * ** ** ** */
+
 .navbar__nav-menu__nav-item a {
   color: var(--accent__access);
 }
@@ -358,9 +359,6 @@ header a {
 
 .navbar__nav-menu__nav-link {
   transition: 0.7s ease;
-}
-
-.navbar__nav-menu__nav-link {
   color: var(--accent);
 }
 
@@ -421,8 +419,7 @@ button.navbar__hamburger {
     top: 4.375em;
     /* right: 0; */
     gap: 0;
-    background-color: hsl(22 100% 100% / 1);
-    background: hsl(0 0% 100% / 0.1);
+    background: hsl(22 100% 100% / 1);
 
     /* ! ** hide it from view ** */
     right: -100%;
@@ -435,32 +432,31 @@ button.navbar__hamburger {
 
   }
 
-  @supports (backdrop-filter: blur(1em)) {
-    .navbar__nav-menu {
-      background: hsl(0 0% 100% / 0.1);
-      backdrop-filter: blur(1.618em);
+    @supports (backdrop-filter: blur(1em)) {
+      .navbar__nav-menu {
+        background: hsl(0 0% 100% / 0.1);
+        -webkit-backdrop-filter: blur(1.618em);
+        backdrop-filter: blur(1.618em);
     }
   }
 
   /* ** don't want menu to appear close to each other ** */
   .navbar__nav-menu__nav-item {
     margin: 1em 0;
-  }
-  .navbar__nav-menu__nav-item {
     color: var(--accent__access);
   }
 
   /* ! [ ] activate with javascript --> script.js */
   .navbar__nav-menu.active {
-    right: 0em;
+    right: 0;
     top: 4.375em;
     padding-bottom: 10em;
   }
 }
 
-/* *************
-*********** HERO Header Title **********
-***************** */
+/* * ********** ********** ********** */
+/* * ********** hero header title *********** */
+/* * ********** ********** ********** */
 
 
 /*************************************************************************************************
