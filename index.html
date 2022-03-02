@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Odin recipes</title>
+  <title>Odin Recipes</title>
   <link rel="stylesheet" href="./css/style.css" />
   <script src="./js/script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,12 +37,12 @@
     <nav aria-label="Primary Navigation" id="navbar" class="[ navbar ]">
       <a href="#" class="[ navbar__nav-branding ]">Odin Recipes</a>
       <ul id="primary-navigation" data-visible="false" class="[ navbar__nav-menu ][ ]">
-        <li class="[ navbar__nav-menu__nav-item ] [ ]"><a class="[ navbar__nav-menu__nav-link ]" href="/index.html"><span aria-hidden="true">00</span>Home</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/about.html"><span aria-hidden="true">01</span>About</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/recipes.html"><span aria-hidden="true">02</span>Recipes</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/stories.html"><span aria-hidden="true">03</span>Stories</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/chefs.html"><span aria-hidden="true">04</span>Chefs</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/contact.html"><span aria-hidden="true">05</span>Contact</a></li>
+        <li class="[ navbar__nav-menu__nav-item ] [ active ]"><a class="[ navbar__nav-menu__nav-link ]" href="/index.html"><span class="[ sr-only ]" aria-hidden="true">00</span>Home</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/about.html"><span class="[ sr-only ]" aria-hidden="true">01</span>About</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/recipes.html"><span class="[ sr-only ]" aria-hidden="true">02</span>Recipes</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/stories.html"><span class="[ sr-only ]" aria-hidden="true">03</span>Stories</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/chefs.html"><span class="[ sr-only ]" aria-hidden="true">04</span>Chefs</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/contact.html"><span class="[ sr-only ]" aria-hidden="true">05</span>Contact</a></li>
       </ul>
       <button class="[ navbar__hamburger ]" id="navbar__hamburger" aria-controls="navbar" aria-expanded="false" aria-label="Menu">
         <!-- 3 lines for hamburger icon -->
@@ -171,7 +171,7 @@
     </section>
   </main>
   <!-- FOOTER MENU -->
-  <footer id="footer">
+  <footer class="[ footer ]">
     <div class="footer__links" id="">
       <a href="#">About</a>
       <a href="#">Recipes</a>
@@ -187,12 +187,13 @@
     </div>
     </div>
     <div class="[ copyright ]">
+      <p class="[ copyright__text ]">
+       <span class="[ sr-only ]">Copyright</span>&copy; 2022
+      </p>
       <div class="[ logo__footer ]">
         <a href="#"><img src="./assets/OR-Logo__lloydlobo.com-20220226180536.png" alt="Odin Recipes Logo" /></a>
+        <a href="#" alt="Odin Recipes">Odin Recipes.</a>
       </div>
-      <p class="copyright__text">
-        &copy; 2022 <a href="#" alt="Odin Recipes">Odin Recipes.</a>
-      </p>
     </div>
   </footer>
 </body>
