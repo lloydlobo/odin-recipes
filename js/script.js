@@ -7,7 +7,7 @@ navbarHamburger.addEventListener("click", () => {
   navbarNavMenu.classList.toggle("active");
 });
 
-//  * make sure the menu closes when clock on any link
+//  * make sure the menu closes when click on any link
 document.querySelectorAll(".navbar__nav-menu__nav-link").forEach((n) =>
   n.addEventListener("click", () => {
     navbarHamburger.classList.remove("active");
