@@ -488,14 +488,14 @@ button.navbar__hamburger {
 *****************************************  SECTIONS **************************************
 *************************************************************************************************/
 
-
+/*
 section {
   overflow: hidden;
   justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
-}
+} */
 
 
 /*************************************************************************************************
@@ -540,22 +540,24 @@ section {
 
 /* Hero Promo__Container */
 
-section {
+/* section {
   overflow: hidden;
-}
+} */
 
 .hero-promo {
   display: flex;
   margin-top: var(--s__500);
   flex-direction: row;
+   background-color: var(--grey__3);
+
 }
 
 /* Promo Image__Container */
 .hero-promo__image {
   display: flex;
-  height: 28.25em;
+  min-height: clamp(1vw, 1em +10vw, 28.25em);
   max-width: 50.8125em;
-  /* object-fit: cover; */
+  object-fit: cover;
   overflow: hidden;
   justify-content: center;
   align-items: center;
@@ -570,33 +572,20 @@ section {
 
 .hero-promo__image {
   max-width: clamp(10.8125em 10vw 30em);
-
 }
-}
-
-/* Promo Image__Styling */
-.promo__image {
-  height: auto;
-  width: 100%;
-  flex-shrink: 0;
 }
 
 /* ****************************************
 ******** 2. Hero Promo Text **************
 **************************************** */
-.hero-pro__text-section,
-.pro-text__1,
-.pro-text__2,
-.hero-pro__text-section__footer {
+.hero-pro__text-section {
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
+  padding-top: 1rem;
+  background-color: var(--grey__3);
 }
 
-.hero-pro__text-section {
-  background-color: var(--grey__3);
-  padding-top: 1rem;
-}
 
 /* Text Section About The Featured Recipe */
 .pro-text__1 {
