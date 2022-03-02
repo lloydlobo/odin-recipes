@@ -20,29 +20,38 @@
 <body class="home">
   <!-- Skip Navigation Hidden -->
   <a href="#main-content" class="skip-nav-link">Skip to main content</a>
-  <!-- Toggle High Contrast -->
-  <!-- <a href="#" class="a11y__hc">Toggle High Contrast</a> -->
   <!-- Header Menu of the Page -->
-  <header class="primary-header flex">
-    <div>
+  <header class="[ primary-header ] [ ]">
+    <!-- Old Logo -->
+    <!-- <div>
       <a href="#"><img src="./assets/logo-odin-recipes.png" alt="odin recipes" class="logo" /></a>
-    </div>
+    </div> -->
+
     <!-- Add Button to disappear the nav on smaller screens-->
     <!-- sr-only is for screen readers only - they can see the button saying "Menu" -->
-    <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+    <!-- <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
       <span class="sr-only">Menu</span>
-    </button>
+    </button> -->
     <!-- aria-control is controlling id="primary-navigation" -->
     <!-- Navigation -->
-    <nav aria-label="Primary Navigation">
-      <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-        <li class="active"><a class="nav-item" href="/index.html"><span aria-hidden="true">00</span>Home</a></li>
-        <li><a class="nav-item" href="/pages/about.html"><span aria-hidden="true">01</span>About</a></li>
-        <li><a class="nav-item" href="/pages/recipes.html"><span aria-hidden="true">02</span>Recipes</a></li>
-        <li><a class="nav-item" href="/pages/stories.html"><span aria-hidden="true">03</span>Stories</a></li>
-        <li><a class="nav-item" href="/pages/chefs.html"><span aria-hidden="true">04</span>Chefs</a></li>
-        <li><a class="nav-item" href="/pages/contact.html"><span aria-hidden="true">05</span>Contact</a></li>
+    <nav aria-label="Primary Navigation" id="navbar" class="[ navbar ]">
+      <a href="#" class="[ navbar__nav-branding ]">Odin Recipes</a>
+      <ul id="primary-navigation" data-visible="false" class="[ navbar__nav-menu ][ ]">
+        <li class="[ navbar__nav-menu__nav-item ] [ ]"><a class="[ navbar__nav-menu__nav-link ]" href="/index.html"><span aria-hidden="true">00</span>Home</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/about.html"><span aria-hidden="true">01</span>About</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/recipes.html"><span aria-hidden="true">02</span>Recipes</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/stories.html"><span aria-hidden="true">03</span>Stories</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/chefs.html"><span aria-hidden="true">04</span>Chefs</a></li>
+        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/contact.html"><span aria-hidden="true">05</span>Contact</a></li>
       </ul>
+      <button class="[ navbar__hamburger ]" id="navbar__hamburger" aria-controls="navbar" aria-expanded="false" aria-label="Menu">
+        <!-- 3 lines for hamburger icon -->
+        <span class="[ navbar__hamburger__bar ]"></span>
+        <span class="[ navbar__hamburger__bar ]"></span>
+        <span class="[ navbar__hamburger__bar ]"></span>
+        <!-- text "menu" for screen readers -->
+        <span class="[ sr-only ]">Menu</span>
+      </button>
     </nav>
   </header>
   <!-- MAIN -->
