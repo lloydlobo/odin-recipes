@@ -23,9 +23,6 @@
   <!-- Header Menu of the Page -->
   <header class="[ primary-header ] [ ]">
     <!-- Old Logo -->
-    <!-- <div>
-      <a href="#"><img src="./assets/logo-odin-recipes.png" alt="odin recipes" class="logo" /></a>
-    </div> -->
 
     <!-- Add Button to disappear the nav on smaller screens-->
     <!-- sr-only is for screen readers only - they can see the button saying "Menu" -->
@@ -35,7 +32,10 @@
     <!-- aria-control is controlling id="primary-navigation" -->
     <!-- Navigation -->
     <nav aria-label="Primary Navigation" id="navbar" class="[ navbar ]">
-      <a href="#" class="[ navbar__nav-branding ]">Odin Recipes</a>
+      <div class="[ navbar__logo ]">
+        <a href="#"><img src="./assets/logo-odin-recipes.png" alt="odin recipes" class="logo" /></a>
+      </div>
+      <a href="#" class="[ navbar__nav-branding ] [ sr-only ]">Odin Recipes</a>
       <ul id="primary-navigation" data-visible="false" class="[ navbar__nav-menu ][ ]">
         <li class="[ navbar__nav-menu__nav-item ] [ active ]"><a class="[ navbar__nav-menu__nav-link ]" href="/index.html"><span class="[ sr-only ]" aria-hidden="true">00</span>Home</a></li>
         <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="/pages/about.html"><span class="[ sr-only ]" aria-hidden="true">01</span>About</a></li>
