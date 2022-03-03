@@ -361,9 +361,6 @@ nav a:hover {
   color: var(--accent);
   font-weight: medium;
 }
-.navbar__nav-menu__nav-item a {
-  color: var(--accent);
-}
 
 .navbar__nav-menu__nav-item a {
   color: var(--secondary);
