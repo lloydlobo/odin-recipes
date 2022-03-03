@@ -31,13 +31,13 @@
     </button> -->
     <!-- aria-control is controlling id="primary-navigation" -->
     <!-- Navigation -->
-    <nav aria-label="Primary Navigation" id="navbar" class="[ navbar ]">
+    <nav aria-label="Primary Navigation" id="navbar" class="[ navbar ] [ sticky ]">
       <div class="[ navbar__logo ]">
         <a href="#"><img src="./assets/logo-odin-recipes.png" alt="odin recipes" class="logo" /></a>
       </div>
       <a href="#" class="[ navbar__nav-branding ] [ sr-only ]">Odin Recipes</a>
       <ul id="primary-navigation" data-visible="false" class="[ navbar__nav-menu ][ ]">
-        <li class="[ navbar__nav-menu__nav-item ] [ active ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">00</span>Home</a></li>
+        <li class="[ navbar__nav-menu__nav-item ] [ active-link ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">00</span>Home</a></li>
         <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">01</span>About</a></li>
         <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">02</span>Recipes</a></li>
         <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">03</span>Stories</a></li>
@@ -57,10 +57,11 @@
   <!-- MAIN -->
   <main id="main-content">
     <section class="[ container ]" id="section-1">
+      <!-- <div class="[ section__gap ]"></div> -->
       <h1>Recipes</h1>
       <!-- Feature Tab -->
       <div class="[ tab-bar ] [ flex ]">
-        <h2 class="[ tab-bar__item ] [ active ]"><a href="#">Featured</a></h2>
+        <h2 class="[ tab-bar__item ] [ active-link ]"><a href="#">Featured</a></h2>
         <h2 class="[ tab-bar__item ]"><a href="#">Trending</a></h2>
         <h2 class="[ tab-bar__item ]"><a href="#">All</a></h2>
       </div>
@@ -187,11 +188,15 @@
     </div>
     </div>
     <div class="[ copyright ]">
-      <p class="[ copyright__text ]">
-       <span class="[ sr-only ]">Copyright</span>&copy; 2022
-      </p>
+      <!-- use div instead of p as min-width for p is set at 12ch; -->
+      <div class="[ copyright__text ]">
+       <span class="[ sr-only ]">Copyright</span>
+       &copy; 2022
+      </div>
       <div class="[ logo__footer ]">
         <a href="#"><img src="./assets/OR-Logo__lloydlobo.com-20220226180536.png" alt="Odin Recipes Logo" /></a>
+      </div>
+      <div class="[ copyright__text ]">
         <a href="#" alt="Odin Recipes">Odin Recipes.</a>
       </div>
     </div>

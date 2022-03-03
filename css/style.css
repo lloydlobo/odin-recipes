@@ -1,5 +1,5 @@
 :root {
-  /* Size Variables */
+  /* * Size Variables */
   --tiniest: 0.23636817em;
   --tinier: 0.31507877em
   --tiny: 0.31507877em
@@ -13,7 +13,7 @@
   --s__800: 3.157em;
   --s__900: 4.209em;
 
-  /* Font Size Variables */
+  /* * Font Size Variables */
   --fs__100: 0.42314348rem
   --fs__200: 0.56405026rem;
   --fs__300: 0.7518797rem;
@@ -25,7 +25,7 @@
   --fs__800: 3.157rem;
   --fs__900: 4.209rem;
 
-  /* Color Scheme */
+  /* * Color Scheme */
   --primary: #333333;
   --secondary: #4f4f4f;
   --tertiary: #828282;
@@ -44,7 +44,7 @@
   --white: #ffffff;
   --black: #000000;
 
-  /* Social Color Schemes */
+  /* * Social Color Schemes */
   --facebook: #3b5998;
   --instagram__grd: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
   --instagram: #e1306c;
@@ -53,15 +53,15 @@
   --twitter: #00acee;
   --youtube: #ff0000;
 
-  /* Font Family */
-  --ff-sans-normal: "Jost", Helvetica, Garamond, "Bodoni Moda", Arial, sans-serif;
+  /* * Font Family */
+  --ff-sans-normal: Jost, Helvetica, Garamond, "Bodoni Moda", Arial, sans-serif;
 }
 
 /* html {
   height: 100%;
 } */
 
-/* set up the body */
+/* * set up the body */
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs__400);
@@ -80,14 +80,14 @@ body {
   /* overflow: hidden; */
 }
 
-/* make images easier to work with */
+/* * make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
 
-/* make form elements easier to work with */
+/* * make form elements easier to work with */
 input,
 button,
 textarea,
@@ -95,7 +95,7 @@ select {
   font: inherit;
 }
 
-/* remove animations for people who've turned it off */
+/* * remove animations for people who've turned it off */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -112,11 +112,12 @@ select {
   border: 2px solid red;
 } */
 
-/* ***********************************************************************************************
-******************************************* FONTS ************************************************
-*************************************************************************************************/
 
-/* 1. Headings */
+/* * ******************************************************************************************** */
+/* * *************************************** typography ********************************** */
+/* * ******************************************************************************************** */
+
+/* * 1. Headings */
 h1, h2, h3, h4, h5 {
   margin-top: 0;
   font-weight: bold;
@@ -157,7 +158,7 @@ h5 {
   margin-bottom: calc(var(--s__400) / var(--s__500));
 }
 
-/* 2. Paragraphs */
+/* * 2. Paragraphs */
 
 p {
   font-size: var(--fs__400); /* 16.00px */
@@ -180,14 +181,16 @@ a:visited {
 
 a:hover, a:focus {
 color: var(--accent);
+
 }
 
 a:active {
   color: var(--accent__active);
 }
-/* ***********************************************************************************************
-******************************************** ELEMENTS ********************************************
-*************************************************************************************************/
+
+/* * ******************************************************************************************** */
+/* * *************************************** elements ********************************** */
+/* * ******************************************************************************************** */
 
 /* Lists */
 
@@ -207,9 +210,10 @@ hr {
   border: 0.5px solid var(--grey__3);
 }
 
-/* * ***********************************************************************************************
-*****************************************  UTILITY CLASSES **************************************
-*************************************************************************************************/
+
+/* * ********************************************************************************************* */
+/* * *************************************** utility classes  ********************************** */
+/* * ********************************************************************************************* */
 
 /* general */
 
@@ -225,6 +229,18 @@ hr {
   gap: var(--gap, 1em);
 }
 
+/* 1. Position sticky will most probably not work if overflow is set to hidden, scroll, or auto on any of the parents of the element.
+2. Position sticky may not work correctly if any parent element has a set height. */
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* required */
+}
+
+.active-link {
+  font-weight: bold !important;
+  border-bottom: 4px solid var(--accent__access);
+}
 /* .d-block {
   display: block;
 } */
@@ -328,9 +344,6 @@ hr {
 /* * **** **** **** */
 
 /* *** header *** */
-header {
-  background-color: var(--white);
-}
 
 header li {
   list-style: none;
@@ -344,25 +357,41 @@ header a {
 /* * ** navbar ** */
 /* * ** ** ** */
 
+nav a:hover {
+  color: var(--accent);
+  font-weight: medium;
+}
 .navbar__nav-menu__nav-item a {
-  color: var(--accent__access);
+  color: var(--accent);
+}
+
+.navbar__nav-menu__nav-item a {
+  color: var(--secondary);
 }
 
 .navbar {
   min-height: 4.37em;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 39em;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
   align-items: center;
   /* padding: 0 1.5em; */
   padding: 0;
   padding-right: 5px;
+  /* ! fixing position of navbar */
+  /* position: fixed; */
+  /* overflow: hidden; */
 }
 
 .navbar__nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3.75em;
+  /* gap: 3.75em; */
+  gap: clamp(1.333em, 1em + 10vw, 2.1875em);
+  margin: 0;
 }
 
 .navbar__nav-branding {
@@ -380,7 +409,7 @@ header a {
 /* ** ** ** */
 
 .navbar__logo {
-  max-width: 11em;
+  max-width: 12em;
   height: auto;
 }
 
@@ -454,27 +483,27 @@ button.navbar__hamburger {
 
   }
 
-    @supports (backdrop-filter: blur(1em)) {
+    /* @supports (backdrop-filter: blur(1em)) {
       .navbar__nav-menu {
         background: hsl(0 0% 100% / 0.1);
         -webkit-backdrop-filter: blur(1.618em);
         backdrop-filter: blur(1.618em);
+    } */
+    /* ** don't want menu to appear close to each other ** */
+    .navbar__nav-menu__nav-item {
+      margin: 1em 0;
+      color: var(--accent__access);
+    }
+
+    /* ! [ ] activate with javascript --> script.js */
+    .navbar__nav-menu.active {
+      right: 0;
+      top: 4.375em;
+      padding-bottom: calc(1em + 1.618%);
     }
   }
 
-  /* ** don't want menu to appear close to each other ** */
-  .navbar__nav-menu__nav-item {
-    margin: 1em 0;
-    color: var(--accent__access);
-  }
 
-  /* ! [ ] activate with javascript --> script.js */
-  .navbar__nav-menu.active {
-    right: 0;
-    top: 4.375em;
-    padding-bottom: calc(1em + 1.618%);
-  }
-}
 .navbar__nav-menu__nav-item.active {
   font-weight: bold;
   border-bottom: 4px solid var(--accent__access);
@@ -497,6 +526,14 @@ section {
   padding: 0;
 } */
 
+.section__gap {
+  display: block;
+  content: "";
+  margin: 0;
+  padding: 0;
+  padding-bottom: clamp(var(--s__900), 1em + 10vw, calc((var(--s__400) * 4.5)));
+  /* margin-bottom: 10em; */
+}
 
 /*************************************************************************************************
 ***************************************** FEATURE - TAB-BAR **************************************
@@ -512,6 +549,7 @@ section {
   /* margin-right: 1rem; */
   font-size: clamp(var(--fs__400), 1rem + 0.328vw, var(--fs__500));
   font-weight: normal;
+  border-bottom: 4px solid inherit;
 }
 
 .tab-bar__item a {
@@ -520,14 +558,8 @@ section {
 }
 
 .tab-bar__item:hover {
-  border-bottom: .25em solid var(--accent__access);
-
-
-}
-.tab-bar__item.active {
-  font-weight: bold;
-  border-bottom: .25em solid var(--accent__access);
-
+  /* border-bottom: .25em solid var(--accent__access); */
+  color: var(--accent);
 }
 
 /* ************************************************************************************************
@@ -724,7 +756,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--grey__3);
   margin-top: 1.7689em;
   padding-top: 1em;
   overflow: hidden;
@@ -752,8 +784,6 @@ footer {
     justify-content: left;
     align-items: left;
     line-height: 1.5;
-    /* margin-top: 1.7689em 0; */
-    /* padding: 1em 0; */
   }
     footer .footer__social-icons {
       margin: 5px 7px 0 0;
@@ -777,11 +807,18 @@ footer {
     flex-direction: row;
     justify-content: left;
     padding-left: 0;
-
   }
+  /* footer .copyright p {
+  } */
+
+  footer .copyright__text p {
+  color: red;
+    }
 
   footer .copyright .logo__footer img {
   margin: 0;
+  /* padding: 0; */
+
   }
   footer .logo__footer {
     display: flex;
@@ -804,7 +841,7 @@ footer {
   padding-right: calc(var(--s__200) + 0.382%);
   margin: 5px 7px 0 0;
   border-top: 0px solid transparent;
-  border-right: 1px solid var(--grey__3);
+  border-right: 1px solid var(--grey__1);
 }
 
 .footer__social-icons {
@@ -869,6 +906,7 @@ footer {
   justify-content: center;
   align-items: center;
   padding: 0 var(--s__400);
+  min-height: 1.555em;
 }
 
 .copyright__text {
