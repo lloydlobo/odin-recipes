@@ -1,206 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Recipes</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,700&family=Jost:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500&display=swap"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Odin Recipes</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <script src="./js/script.js" defer></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,700&family=Jost:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400;1,500&display=swap"
-    rel="stylesheet" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  crossorigin="anonymous" />
-</head>
+  <body class="home">
+    <!-- Skip Navigation Hidden -->
+    <a href="#main-content" class="skip-nav-link">Skip to main content</a>
+    <!-- Header Menu of the Page -->
+    <header class="[ primary-header ] [ ]">
+      <!-- Old Logo -->
 
-<body class="home">
-  <!-- Skip Navigation Hidden -->
-  <a href="#main-content" class="skip-nav-link">Skip to main content</a>
-  <!-- Header Menu of the Page -->
-  <header class="[ primary-header ] [ ]">
-    <!-- Old Logo -->
-
-    <!-- Add Button to disappear the nav on smaller screens-->
-    <!-- sr-only is for screen readers only - they can see the button saying "Menu" -->
-    <!-- <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+      <!-- Add Button to disappear the nav on smaller screens-->
+      <!-- sr-only is for screen readers only - they can see the button saying "Menu" -->
+      <!-- <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
       <span class="sr-only">Menu</span>
     </button> -->
-    <!-- aria-control is controlling id="primary-navigation" -->
-    <!-- Navigation -->
-    <nav aria-label="Primary Navigation" id="navbar" class="[ navbar ] [ sticky ]">
-      <div class="[ navbar__logo ]">
-        <a href="#"><img src="./assets/logo-odin-recipes.png" alt="odin recipes" class="logo" /></a>
-      </div>
-      <a href="#" class="[ navbar__nav-branding ] [ sr-only ]">Odin Recipes</a>
-      <ul id="primary-navigation" data-visible="false" class="[ navbar__nav-menu ][ ]">
-        <li class="[ navbar__nav-menu__nav-item ] [ active-link ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">00</span>Home</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">01</span>About</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">02</span>Recipes</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">03</span>Stories</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">04</span>Chefs</a></li>
-        <li class="[ navbar__nav-menu__nav-item ]"><a class="[ navbar__nav-menu__nav-link ]" href="#"><span class="[ sr-only ]" aria-hidden="true">05</span>Contact</a></li>
-      </ul>
-      <button class="[ navbar__hamburger ]" id="navbar__hamburger" aria-controls="navbar" aria-expanded="false" aria-label="Menu">
-        <!-- 3 lines for hamburger icon -->
-        <span class="[ navbar__hamburger__bar ]"></span>
-        <span class="[ navbar__hamburger__bar ]"></span>
-        <span class="[ navbar__hamburger__bar ]"></span>
-        <!-- text "menu" for screen readers -->
-        <span class="[ sr-only ]">Menu</span>
-      </button>
-    </nav>
-  </header>
-  <!-- MAIN -->
-  <main id="main-content">
-    <section class="[ container ]" id="section-1">
-      <!-- <div class="[ section__gap ]"></div> -->
-      <h1>Recipes</h1>
-      <!-- Feature Tab -->
-      <div class="[ tab-bar ] [ flex ]">
-        <h2 class="[ tab-bar__item ] [ active-link ]"><a href="#">Featured</a></h2>
-        <h2 class="[ tab-bar__item ]"><a href="#">Trending</a></h2>
-        <h2 class="[ tab-bar__item ]"><a href="#">All</a></h2>
-      </div>
-    </section>
-    <!-- Feature Tab Line Divider <hr> -->
-    <hr />
-    <section class="[ container ]" id="section-2">
-      <!-- Hero Promo Wrapper -->
-      <div class="[ hero-promo ]">
-        <!-- Promo Hero Image -->
-        <div class="[ hero-promo__image ]">
-          <a href="#"><img class="[ promo__image ]" src="./images/tacos.jpg" alt="Image of Tacos" /></a>
+      <!-- aria-control is controlling id="primary-navigation" -->
+      <!-- Navigation -->
+      <nav
+        aria-label="Primary Navigation"
+        id="navbar"
+        class="[ navbar ] [ sticky ]"
+      >
+        <div class="[ navbar__logo ]">
+          <a href="#"
+            ><img
+              src="./assets/logo-odin-recipes.png"
+              alt="odin recipes"
+              class="logo"
+          /></a>
         </div>
-        <!-- Promo Hero Text-Section -->
-        <div class="[ hero-pro__text-section ]">
-          <div class="[ pro-text__1 ]">
-            <h3 class="[ pro-text__1__h3 ]"><a href="#" alt="">Easy Taco Recipes</a></h3>
-            <p class="[ ]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              ipsam debitis reprehenderit cum quisquam amet veritatis non
-              vero, sint ipsum necessitatibus in nemo blanditiis nesciunt!
-              Dolores corrupti animi explicabo natus.
-            </p>
+        <a href="#" class="[ navbar__nav-branding ] [ sr-only ]"
+          >Odin Recipes</a
+        >
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="[ navbar__nav-menu ][ ]"
+        >
+          <li class="[ navbar__nav-menu__nav-item ] [ active-link ]">
+            <a class="[ navbar__nav-menu__nav-link ]" href="#"
+              ><span class="[ sr-only ]" aria-hidden="true">00</span>Home</a
+            >
+          </li>
+          <li class="[ navbar__nav-menu__nav-item ]">
+            <a class="[ navbar__nav-menu__nav-link ]" href="#"
+              ><span class="[ sr-only ]" aria-hidden="true">01</span>About</a
+            >
+          </li>
+          <li class="[ navbar__nav-menu__nav-item ]">
+            <a class="[ navbar__nav-menu__nav-link ]" href="#"
+              ><span class="[ sr-only ]" aria-hidden="true">02</span>Recipes</a
+            >
+          </li>
+          <li class="[ navbar__nav-menu__nav-item ]">
+            <a class="[ navbar__nav-menu__nav-link ]" href="#"
+              ><span class="[ sr-only ]" aria-hidden="true">03</span>Stories</a
+            >
+          </li>
+          <li class="[ navbar__nav-menu__nav-item ]">
+            <a class="[ navbar__nav-menu__nav-link ]" href="#"
+              ><span class="[ sr-only ]" aria-hidden="true">04</span>Chefs</a
+            >
+          </li>
+          <li class="[ navbar__nav-menu__nav-item ]">
+            <a class="[ navbar__nav-menu__nav-link ]" href="#"
+              ><span class="[ sr-only ]" aria-hidden="true">05</span>Contact</a
+            >
+          </li>
+        </ul>
+        <button
+          class="[ navbar__hamburger ]"
+          id="navbar__hamburger"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Menu"
+        >
+          <!-- 3 lines for hamburger icon -->
+          <span class="[ navbar__hamburger__bar ]"></span>
+          <span class="[ navbar__hamburger__bar ]"></span>
+          <span class="[ navbar__hamburger__bar ]"></span>
+          <!-- text "menu" for screen readers -->
+          <span class="[ sr-only ]">Menu</span>
+        </button>
+      </nav>
+    </header>
+    <!-- MAIN -->
+    <main id="main-content">
+      <section class="[ container ]" id="section-1">
+        <!-- <div class="[ section__gap ]"></div> -->
+        <h1>Recipes</h1>
+        <!-- Feature Tab -->
+        <div class="[ tab-bar ] [ flex ]">
+          <h2 class="[ tab-bar__item ] [ active-link ]">
+            <a href="#">Featured</a>
+          </h2>
+          <h2 class="[ tab-bar__item ]"><a href="#">Trending</a></h2>
+          <h2 class="[ tab-bar__item ]"><a href="#">All</a></h2>
+        </div>
+      </section>
+      <!-- Feature Tab Line Divider <hr> -->
+      <hr />
+      <section class="[ container ]" id="section-2">
+        <!-- Hero Promo Wrapper -->
+        <div class="[ hero-promo ]">
+          <!-- Promo Hero Image -->
+          <div class="[ hero-promo__image ]">
+            <a href="#"
+              ><img
+                class="[ promo__image ]"
+                src="./images/tacos.jpg"
+                alt="Image of Tacos"
+            /></a>
           </div>
-          <div class="[ pro-text__2 ]">
-            <h4 class="[ pro-text__2__h4 ] [ ]">Recipes from collection</h4>
-            <div class="[ hero-pro__text-section__recipe-links ]">
-              <a href="#">Mexican Tacos</a>
-              <a href="#">Classic Tacos</a>
-              <a href="#">Homemade Tacos</a>
+          <!-- Promo Hero Text-Section -->
+          <div class="[ hero-pro__text-section ]">
+            <div class="[ pro-text__1 ]">
+              <h3 class="[ pro-text__1__h3 ]">
+                <a href="#" alt="">Easy Taco Recipes</a>
+              </h3>
+              <p class="[ ]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+                ipsam debitis reprehenderit cum quisquam amet veritatis non
+                vero, sint ipsum necessitatibus in nemo blanditiis nesciunt!
+                Dolores corrupti animi explicabo natus.
+              </p>
+            </div>
+            <div class="[ pro-text__2 ]">
+              <h4 class="[ pro-text__2__h4 ] [ ]">Recipes from collection</h4>
+              <div class="[ hero-pro__text-section__recipe-links ]">
+                <a href="#">Mexican Tacos</a>
+                <a href="#">Classic Tacos</a>
+                <a href="#">Homemade Tacos</a>
+              </div>
+            </div>
+            <div class="[ hero-pro__text-section__footer ]">
+              <p>
+                See
+                <a href="#">all recipes for Easy Taco recipes</a>
+              </p>
             </div>
           </div>
-          <div class="[ hero-pro__text-section__footer ]">
-            <p>
-              See
-              <a href="#">all recipes for Easy Taco recipes</a>
-            </p>
+        </div>
+      </section>
+      <section class="[ container ]" id="section-3">
+        <div class="[ recipe-layout__item ]">
+          <div class="[ rcp-1 ]">
+            <!-- 1. Recipe Image -->
+            <div class="[ rcp__image ]">
+              <a href="./recipes/traditional-lasagna.html"
+                ><img
+                  class="[ rcp-promo__image ]"
+                  src="./images/traditional-lasagna-visual-stories-micheile-44pKJMz9TeU-unsplash.jpg"
+                  alt="Image of Traditional Lasagna"
+              /></a>
+            </div>
+            <!-- 2. Recipe Text-Section -->
+            <div class="[ rcp__text-section ]">
+              <h3 class="[ txt-medium ]">
+                <a href="./recipes/traditional-lasagna.html"
+                  >Traditional Lasagna</a
+                >
+              </h3>
+              <p class="[ txt-muted ]">3 recipes</p>
+              <p class="[ rcp__tag ]">Collection</p>
+            </div>
+          </div>
+          <div class="rcp-2">
+            <!-- 1. Recipe Image -->
+            <div class="rcp__image">
+              <a href="./recipes/classic-waffles.html"
+                ><img
+                  class="rcp-promo__image"
+                  src="./images/classic-waffles-alexandre-boucey-IZF51fI0p5w-unsplash-20220222135845.jpg"
+                  alt="Image of classic waffles"
+              /></a>
+            </div>
+            <!-- 2. Recipe Text-Section -->
+            <div class="rcp__text-section">
+              <h3 class="txt-medium">
+                <a href="./recipes/classic-waffles.html">Classic Waffles</a>
+              </h3>
+              <p class="txt-muted">4 recipes</p>
+              <p class="rcp__tag">Collection</p>
+            </div>
+          </div>
+          <div class="rcp-3">
+            <!-- 1. Recipe Image -->
+            <div class="rcp__image">
+              <a href="./recipes/oatmeal-raisin-cookie.html"
+                ><img
+                  class="rcp-promo__image"
+                  src="./images/oatmeal-raisin-cookie-nathan-dumlao-N0BVFk3WIhU-unsplash.jpg"
+                  alt="Image of Oatmeal Raisin Cookie on a glass of milk"
+              /></a>
+            </div>
+            <!-- 2. Recipe Text-Section -->
+            <div class="rcp__text-section">
+              <h3 class="txt-medium">
+                <a href="./recipes/oatmeal-raisin-cookie.html"
+                  >Oatmeal Raisin Cookie</a
+                >
+              </h3>
+              <p class="txt-muted">9 recipes</p>
+              <p class="rcp__tag">Collection</p>
+            </div>
+          </div>
+          <div class="rcp-4">
+            <!-- 1. Recipe Image -->
+            <div class="rcp__image">
+              <a href="#"
+                ><img
+                  class="rcp-promo__image"
+                  src="./images/biryani.png"
+                  alt="Image of Biryani"
+              /></a>
+            </div>
+            <!-- 2. Recipe Text-Section -->
+            <div class="rcp__text-section">
+              <h3 class="txt-medium">
+                <a href="./recipes/hyderabadi-biryani.html"
+                  >Hyderabadi Biryani</a
+                >
+              </h3>
+              <p class="txt-muted">2 recipes</p>
+              <p class="rcp__tag">Collection</p>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
+    <!-- FOOTER MENU -->
+    <footer class="[ footer ]">
+      <div class="footer__links" id="">
+        <a href="#">About</a>
+        <a href="#">Recipes</a>
+        <a href="#">Stories</a>
+        <a href="#">Chefs</a>
+        <a href="#">Contact</a>
       </div>
-    </section>
-    <section class="[ container ]" id="section-3">
-      <div class="[ recipe-layout__item ]">
-        <div class="[ rcp-1 ]">
-          <!-- 1. Recipe Image -->
-          <div class="[ rcp__image ]">
-            <a href="./recipes/traditional-lasagna.html"><img class="[ rcp-promo__image ]"
-                src="./images/traditional-lasagna-visual-stories-micheile-44pKJMz9TeU-unsplash.jpg"
-                alt="Image of Traditional Lasagna" /></a>
-          </div>
-          <!-- 2. Recipe Text-Section -->
-          <div class="[ rcp__text-section ]">
-            <h3 class="[ txt-medium ]">
-              <a href="./recipes/traditional-lasagna.html">Traditional Lasagna</a>
-            </h3>
-            <p class="[ txt-muted ]">3 recipes</p>
-            <p class="[ rcp__tag ]">Collection</p>
-          </div>
+      <div class="footer__social-icons">
+        <a href="#" alt="instagram icon"
+          ><i class="fa fa-instagram" title="Instagram"></i
+        ></a>
+        <a href="#" alt="instagram icon"
+          ><i class="fa fa-twitter" title="Twitter"></i
+        ></a>
+        <a href="#" alt="facebook icon"
+          ><i class="fa fa-facebook" title="Facebook"></i
+        ></a>
+        <a href="#" alt="pinterest icon"
+          ><i class="fa fa-pinterest" title="Pinterest"></i
+        ></a>
+      </div>
+      <div class="[ copyright ]">
+        <!-- use div instead of p as min-width for p is set at 12ch; -->
+        <div class="[ copyright__text ]">
+          <span class="[ sr-only ]">Copyright</span>
+          &copy; 2022
         </div>
-        <div class="rcp-2">
-          <!-- 1. Recipe Image -->
-          <div class="rcp__image">
-            <a href="./recipes/classic-waffles.html"><img class="rcp-promo__image"
-                src="./images/classic-waffles-alexandre-boucey-IZF51fI0p5w-unsplash-20220222135845.jpg"
-                alt="Image of classic waffles" /></a>
-          </div>
-          <!-- 2. Recipe Text-Section -->
-          <div class="rcp__text-section">
-            <h3 class="txt-medium">
-              <a href="./recipes/classic-waffles.html">Classic Waffles</a>
-            </h3>
-            <p class="txt-muted">4 recipes</p>
-            <p class="rcp__tag">Collection</p>
-          </div>
+        <div class="[ logo__footer ]">
+          <a href="#"
+            ><img
+              src="./assets/OR-Logo__lloydlobo.com-20220226180536.png"
+              alt="Odin Recipes Logo"
+          /></a>
         </div>
-        <div class="rcp-3">
-          <!-- 1. Recipe Image -->
-          <div class="rcp__image">
-            <a href="./recipes/oatmeal-raisin-cookie.html"><img class="rcp-promo__image"
-                src="./images/oatmeal-raisin-cookie-nathan-dumlao-N0BVFk3WIhU-unsplash.jpg"
-                alt="Image of Oatmeal Raisin Cookie on a glass of milk" /></a>
-          </div>
-          <!-- 2. Recipe Text-Section -->
-          <div class="rcp__text-section">
-            <h3 class="txt-medium">
-              <a href="./recipes/oatmeal-raisin-cookie.html">Oatmeal Raisin Cookie</a>
-            </h3>
-            <p class="txt-muted">9 recipes</p>
-            <p class="rcp__tag">Collection</p>
-          </div>
-        </div>
-        <div class="rcp-4">
-          <!-- 1. Recipe Image -->
-          <div class="rcp__image">
-            <a href="#"><img class="rcp-promo__image" src="./images/biryani.png"
-                alt="Image of Biryani" /></a>
-          </div>
-          <!-- 2. Recipe Text-Section -->
-          <div class="rcp__text-section">
-            <h3 class="txt-medium">
-              <a href="./recipes/hyderabadi-biryani.html">Hyderabadi Biryani</a>
-            </h3>
-            <p class="txt-muted">2 recipes</p>
-            <p class="rcp__tag">Collection</p>
-          </div>
+        <div class="[ copyright__text ]">
+          <a href="#" alt="Odin Recipes">Odin Recipes.</a>
         </div>
       </div>
-    </section>
-  </main>
-  <!-- FOOTER MENU -->
-  <footer class="[ footer ]">
-    <div class="footer__links" id="">
-      <a href="#">About</a>
-      <a href="#">Recipes</a>
-      <a href="#">Stories</a>
-      <a href="#">Chefs</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="footer__social-icons">
-      <a href="#" alt="instagram icon"><i class="fa fa-instagram" title="Instagram"></i></a>
-      <a href="#" alt="instagram icon"><i class="fa fa-twitter" title="Twitter"></i></a>
-      <a href="#" alt="facebook icon"><i class="fa fa-facebook" title="Facebook"></i></a>
-      <a href="#" alt="pinterest icon"><i class="fa fa-pinterest" title="Pinterest"></i></a>
-    </div>
-    </div>
-    <div class="[ copyright ]">
-      <!-- use div instead of p as min-width for p is set at 12ch; -->
-      <div class="[ copyright__text ]">
-       <span class="[ sr-only ]">Copyright</span>
-       &copy; 2022
-      </div>
-      <div class="[ logo__footer ]">
-        <a href="#"><img src="./assets/OR-Logo__lloydlobo.com-20220226180536.png" alt="Odin Recipes Logo" /></a>
-      </div>
-      <div class="[ copyright__text ]">
-        <a href="#" alt="Odin Recipes">Odin Recipes.</a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
