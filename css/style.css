@@ -849,26 +849,20 @@ footer {
 
 .footer__social-icons {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-bottom: var(--s__400);
-  margin: 5px 7px 0 0;
 }
 
 .footer__social-icons i {
   padding-left: calc(var(--s__400) + 0.382%);
   padding-right: calc(var(--s__400) + 0.382%);
-  /* margin: 5px 7px 0 0; */
-  /* padding: 0 var(--s__500); */
   text-shadow: 0 var(--s__100) var(--s__200) rgba(0, 0, 0, 0.6);
   transition: all ease-in-out 150ms;
 }
 /* Instagram */
 .footer__social-icons a:nth-child(1) {
   color: var(--instagram);
-  /* background: var(--instagram__grd); */
 }
 /* Twitter */
 .footer__social-icons a:nth-child(2) {
