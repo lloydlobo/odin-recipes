@@ -373,7 +373,7 @@ nav a:hover {
   min-height: 4.37em;
   display: flex;
   flex-direction: row;
-  gap: 39em;
+  gap: clamp(32em, 1em + 10vw, 39em);
   /* justify-content: space-between; */
   justify-content: flex-start;
   align-items: center;
