@@ -25,6 +25,9 @@
   --fs__800: 3.157rem;
   --fs__900: 4.209rem;
 
+  /* * Font Size Special Variables */
+  --fss__700: clamp(var(--fs__400), 1rem + 0.328vw, var(--fs__500));
+
   /* * Color Scheme */
   --primary: #333333;
   --secondary: #4f4f4f;
@@ -64,9 +67,9 @@
   --ff-sans-normal: Jost, Helvetica, Garamond, "Bodoni Moda", Arial, sans-serif;
 }
 
-/* html {
-  height: 100%;
-} */
+html {
+  scroll-behavior: smooth;
+}
 
 /* * set up the body */
 body {
@@ -1040,7 +1043,8 @@ p.copyright__text {
 }
 
 .recipes__child h3 {
-  font-size: clamp(var(--fs__400), 1rem + 0.328vw, var(--fs__500));
+  /* font-size: clamp(var(--fs__400), 1rem + 0.328vw, var(--fs__500)); */
+  font-size: var(--fss__700);
   /* font-size: var(--fs__500); */
 }
 
@@ -1059,5 +1063,11 @@ p.copyright__text {
 }
 
 .recipes__child__content {
+  display: grid;
+  /* grid-template-rows: repeat(3, 1fr); */
+  grid-template-rows: repeat(
+    auto-fit,
+    minmax(calc(calc(var(--fss__700) * 2) + 0.5em), 1fr)
+  );
   padding: 0.5em 0.5em 0;
 }
