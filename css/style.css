@@ -1,8 +1,8 @@
 :root {
   /* * Size Variables */
   --tiniest: 0.23636817em;
-  --tinier: 0.31507877em
-  --tiny: 0.31507877em
+  --tinier: 0.31507877em;
+  --tiny: 0.31507877em;
   --s__100: 0.42314348em;
   --s__200: 0.56405026em;
   --s__300: 0.7518797em;
@@ -14,7 +14,7 @@
   --s__900: 4.209em;
 
   /* * Font Size Variables */
-  --fs__100: 0.42314348rem
+  --fs__100: 0.42314348rem;
   --fs__200: 0.56405026rem;
   --fs__300: 0.7518797rem;
   --fs__nav: 0.926875rem;
@@ -1063,5 +1063,5 @@ margin-bottom: 0;
   display: grid;
   /* grid-template-rows: repeat(3, 1fr); */
   grid-template-rows: repeat(auto-fit, minmax(calc(calc(var(--fss__700) * 2) + 0.5em), 1fr));
-  padding: 0.5em 0.5em 0 0.5em;
+  padding: 0.5em 0.5em 0;
 }
