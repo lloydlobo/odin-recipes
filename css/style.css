@@ -746,17 +746,17 @@ box-shadow:
   gap: var(--s__500);
 }
 
-@media (max-width: 35em) {
+/* @media (max-width: 35em) {
 
   .recipe-layout__item {
     flex-direction: column;
   }
-}
+} */
 
 /* Recipe__Promo Image__Container */
 .rcp__image {
   display: flex;
-  height: 10.125em;
+  max-height: 10.125em;
   max-width: 50.8125em;
   /* object-fit: cover; */
   overflow: hidden;
@@ -811,7 +811,36 @@ box-shadow:
     font-weight: normal;
     margin: var(--s__300) 0 var(--s__400);
 }
+.section-3 {
+  display: inline-flex;
+}
+@media screen and (min-width: 40em) {
+  /* .section-3 {
+    overflow: hidden;
 
+  } */
+  .recipe-layout__item{
+  /* flex-direction: column; */
+    /* direction: ltr; */
+    /* flex-flow: row wrap; */
+    /* flex-grow: 1; */
+    /* list-style: none; */
+    /* text-align: left; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-rendering: optimizeSpeed;
+    /* flex: 2em; */
+    /* flex: 0 1 20px; */
+  }
+
+  .rcp-1, .rcp-2, .rcp-3, .rcp-4 {
+    /* flex-wrap: wrap; */
+  /* flex: 0 1 20px; */
+  /* direction: ltr; */
+
+  }
+}
 /* ************************************************************************************************
 ******************************************* FOOTER LAYOUT *******************************************
 ************************************************************************************************ */
@@ -990,3 +1019,42 @@ margin-bottom: 0;
   justify-content: center;
 }
 
+/* * ********************************************************************************************* */
+/* * *************************************** main__section__recipes layout grid  ********************************** */
+/* * ********************************************************************************************* */
+
+.recipes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat(2, minmax(40px, 1fr));
+  grid-template-columns: repeat(2, minmax(40px, 1fr));
+  gap: 1rem;
+  padding-top: 1em;
+  /* ! [x] disable padding and border later */
+  /* border: 2px solid blue; */
+  /* padding: 5px; */
+}
+
+.recipes__child h3 {
+  font-size: clamp(var(--fs__400), 1rem + 0.328vw, var(--fs__500));
+  /* font-size: var(--fs__500); */
+}
+
+.recipes__child {
+  /* border: 2px solid red; */
+  background: var(--grey__3);
+}
+
+.recipes__child img {
+  display: block;
+  min-height: 10em;
+  max-height: 10.125em;
+  max-width: 50.8125em;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.recipes__child__content{
+  padding: 0.5em 0.5em 0 0.5em;
+}
