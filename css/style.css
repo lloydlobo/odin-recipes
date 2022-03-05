@@ -436,7 +436,7 @@ nav a:hover {
 }
 
 .navbar {
-  min-height: 4.37em;
+  min-height: 6em;
   display: flex;
   flex-direction: row;
   /* gap: clamp(32em, 1em + 10vw, 39em); */
