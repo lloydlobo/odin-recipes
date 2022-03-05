@@ -101,6 +101,8 @@ body {
   background-color: var(--white);
   line-height: 1.5;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
   /* padding: 0.5vw 7vw; */
   /* display: grid; */
   /* display: -ms-grid; */
@@ -273,20 +275,20 @@ hr {
 .container {
   margin: 0 auto;
   max-width: 72.5rem;
-  padding: 0 0.1rem;
+  padding: 0 1em;
 }
 
 @media screen and (min-width: 40em) {
   .container {
     margin: 0 auto;
-    max-width: 72.5rem;
+    max-width: 77.7rem;
     padding: 0 1.5rem;
   }
 }
 @media screen and (min-width: 65em) {
   .container {
     margin: 0 auto;
-    max-width: 72.5rem;
+    max-width: 77.7rem;
     padding: 0 3.5rem;
   }
 }
