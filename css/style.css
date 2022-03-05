@@ -107,7 +107,6 @@ body {
   display: grid;
   grid-auto-flow: row;
   gap: 0;
-  display: -ms-grid;
   min-height: 100vh;
   /* -ms-grid-row: min-content 1fr; */
   /* grid-template-rows: min-content 1fr; */
