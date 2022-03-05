@@ -33,7 +33,7 @@
       <nav
         aria-label="Primary Navigation"
         id="navbar"
-        class="[ navbar ] [ sticky ]"
+        class="[ navbar ] [ container sticky ]"
       >
         <!-- * navbar logo  -->
         <div class="[ navbar__logo ]">
@@ -140,107 +140,101 @@
     <main id="main-content">
       <!-- * -->
       <!-- * section 1 -->
-      <section class="[ container ]" id="section-1">
+      <section class="[ home-section ]" id="section-1">
         <!-- <div class="[ section__gap ]"></div> -->
-        <h1>Recipes</h1>
-        <!-- Feature Tab -->
-        <div class="[ tab-bar ] [ flex ]">
-          <h2 class="[ tab-bar__item ] [ active-link ]">
-            <a href="#">Featured</a>
-          </h2>
-          <h2 class="[ tab-bar__item ]"><a href="#">Trending</a></h2>
-          <h2 class="[ tab-bar__item ]"><a href="#">All</a></h2>
-        </div>
-      </section>
-      <!-- Feature Tab Line Divider <hr> -->
-      <hr />
-      <!-- * -->
-      <!-- * section 2 -->
-      <section class="[ container ]" id="section-2">
-        <!-- Hero Promo Wrapper -->
-        <div class="[ hero-promo ]">
-          <!-- Promo Hero Image -->
-          <div class="[ hero-promo__image ]">
-            <a href="#"
-              ><img
-                class="[ promo__image ]"
-                src="./images/tacos.jpg"
-                alt="Image of Tacos"
-            /></a>
+        <div class="container flow">
+          <h1>Recipes</h1>
+          <!-- Feature Tab -->
+          <div class="[ tab-bar ] [ flex ]">
+            <h2 class="[ tab-bar__item ] [ active-link ]">
+              <a href="#">Featured</a>
+            </h2>
+            <h2 class="[ tab-bar__item ]"><a href="#">Trending</a></h2>
+            <h2 class="[ tab-bar__item ]"><a href="#">All</a></h2>
           </div>
-          <!-- Promo Hero Text-Section -->
-          <div class="[ hero-pro__text-section ]">
-            <div class="[ pro-text__1 ]">
-              <h3 class="[ pro-text__1__h3 ]">
-                <a href="#" title="easy taco recipes">Easy Taco Recipes</a>
+          <hr />
+        </div>
+        <!-- Feature Tab Line Divider <hr> -->
+        <!-- todo * -->
+        <!-- * section 2 -->
+        <div class="container flow">
+          <div class="recipes__hero-promo">
+            <div class="hero-promo__image">
+              <img src="./images/tacos.jpg" alt="Tacos" />
+            </div>
+            <div class="recipes__collection">
+              <h3>
+                <a href="./recipes/traditional-lasagna.html"
+                  >Easy Taco Recipes</a
+                >
               </h3>
-              <p class="[ ]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                ipsam debitis reprehenderit cum quisquam amet veritatis non
-                vero, sint ipsum necessitatibus in nemo blanditiis nesciunt!
-                Dolores corrupti animi explicabo natus.
-              </p>
-            </div>
-            <div class="[ pro-text__2 ]">
-              <h4 class="[ pro-text__2__h4 ] [ ]">Recipes from collection</h4>
-              <div class="[ hero-pro__text-section__recipe-links ]">
-                <a href="#">Mexican Tacos</a>
-                <a href="#">Classic Tacos</a>
-                <a href="#">Homemade Tacos</a>
-              </div>
-            </div>
-            <div class="[ hero-pro__text-section__footer ]">
               <p>
-                See
-                <a href="#">all recipes for Easy Taco recipes</a>
+                Make your start to your siesta a big one with these tasty and
+                filling taco recipes.
               </p>
+              <h4 class="recipes__collection__content">
+                Recipes from collection
+              </h4>
+              <ul>
+                <li><a href="#">Mexican Tacos</a></li>
+                <li><a href="#">Classic Tacos</a></li>
+                <li><a href="#">Homemade Tacos</a></li>
+              </ul>
+              <div>
+                See
+                <a class="recipes__collection__link" href="#"
+                  >all recipes for Easy Taco Recipes</a
+                >.
+              </div>
             </div>
           </div>
         </div>
       </section>
       <!-- * -->
       <!-- * section 3 -->
-      <section class="section-3" id="section-3">
-        <div class="recipes">
-          <div class="recipes__child">
-            <img
-              src="./images/traditional-lasagna-visual-stories-micheile-44pKJMz9TeU-unsplash.jpg"
-              alt="Traditional Lasagna"
-            />
-            <div class="recipes__child__content">
-              <h3>Traditional Lasagna</h3>
-              <p>1 recipe</p>
-              <p><sub>Collection</sub></p>
+      <section class="home-section section-3" id="section-3">
+        <div class="container flow">
+          <div class="recipes">
+            <div class="recipes__child">
+              <img
+                src="./images/traditional-lasagna-visual-stories-micheile-44pKJMz9TeU-unsplash.jpg"
+                alt="Traditional Lasagna"
+              />
+              <div class="recipes__child__content">
+                <h3>Traditional Lasagna</h3>
+                <p>1 recipe</p>
+                <p><sub>Collection</sub></p>
+              </div>
             </div>
-          </div>
-          <div class="recipes__child">
-            <img
-              src="./images/classic-waffles-alexandre-boucey-IZF51fI0p5w-unsplash-20220222135845.jpg"
-              alt="Classic Waffles"
-            />
-            <div class="recipes__child__content">
-              <h3>Classic Waffles</h3>
-              <p>2 recipes</p>
-              <p><sub>Collection</sub></p>
+            <div class="recipes__child">
+              <img
+                src="./images/classic-waffles-alexandre-boucey-IZF51fI0p5w-unsplash-20220222135845.jpg"
+                alt="Classic Waffles"
+              />
+              <div class="recipes__child__content">
+                <h3>Classic Waffles</h3>
+                <p>2 recipes</p>
+                <p><sub>Collection</sub></p>
+              </div>
             </div>
-          </div>
-          <div class="recipes__child">
-            <img
-              src="./images/oatmeal-raisin-cookie-nathan-dumlao-N0BVFk3WIhU-unsplash.jpg"
-              alt="Oatmeal Raisin Cookie"
-            />
-            <div class="recipes__child__content">
-              <h3>Oatmeal Raisin Cookie</h3>
-              <p>1 recipe</p>
-              <p><sub>Collection</sub></p>
+            <div class="recipes__child">
+              <img
+                src="./images/oatmeal-raisin-cookie-nathan-dumlao-N0BVFk3WIhU-unsplash.jpg"
+                alt="Oatmeal Raisin Cookie"
+              />
+              <div class="recipes__child__content">
+                <h3>Oatmeal Raisin Cookie</h3>
+                <p>1 recipe</p>
+                <p><sub>Collection</sub></p>
+              </div>
             </div>
-          </div>
-          <div class="recipes__child">
-            <img src="./images/biryani.png" alt="Hyderabadi Biryani" />
-            <div class="recipes__child__content">
-              <h3>Hyderabadi Biryani</h3>
-              <p>1 recipe</p>
-              <p><sub>Collection</sub></p>
+            <div class="recipes__child">
+              <img src="./images/biryani.png" alt="Hyderabadi Biryani" />
+              <div class="recipes__child__content">
+                <h3>Hyderabadi Biryani</h3>
+                <p>1 recipe</p>
+                <p><sub>Collection</sub></p>
+              </div>
             </div>
           </div>
         </div>
@@ -249,43 +243,48 @@
     <!-- * -->
     <!-- * footer -->
     <!-- * -->
-    <footer class="[ footer ]">
-      <div class="[ footer__links ]">
-        <a href="#">About</a>
-        <a href="#">Recipes</a>
-        <a href="#">Stories</a>
-        <a href="#">Chefs</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="[ footer__social-icons ]">
-        <a href="#" title="instagram icon"
-          ><i class="fa fa-instagram" title="Instagram"></i
-        ></a>
-        <a href="#" title="instagram icon"
-          ><i class="fa fa-twitter" title="Twitter"></i
-        ></a>
-        <a href="#" title="facebook icon"
-          ><i class="fa fa-facebook" title="Facebook"></i
-        ></a>
-        <a href="#" title="pinterest icon"
-          ><i class="fa fa-pinterest" title="Pinterest"></i
-        ></a>
-      </div>
-      <div class="[ copyright ]">
-        <!-- use div instead of p as min-width for p is set at 12ch; -->
-        <div class="[ copyright__text ]">
-          <span class="[ sr-only ]">Copyright</span>
-          &copy; 2022
-        </div>
-        <div class="[ logo__footer ]">
-          <a href="#"
-            ><img
-              src="./assets/OR-Logo__lloydlobo.com-20220226180536.png"
-              alt="Odin Recipes Logo"
-          /></a>
-        </div>
-        <div class="[ copyright__text ]">
-          <a href="#" title="Odin Recipes">Odin Recipes.</a>
+    <footer class="[ ]">
+      <div class="container flow">
+        <hr />
+        <div class="footer">
+          <div class="[ footer__links ]">
+            <a href="#">About</a>
+            <a href="#">Recipes</a>
+            <a href="#">Stories</a>
+            <a href="#">Chefs</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="[ footer__social-icons ]">
+            <a href="#" title="instagram icon"
+              ><i class="fa fa-instagram" title="Instagram"></i
+            ></a>
+            <a href="#" title="instagram icon"
+              ><i class="fa fa-twitter" title="Twitter"></i
+            ></a>
+            <a href="#" title="facebook icon"
+              ><i class="fa fa-facebook" title="Facebook"></i
+            ></a>
+            <a href="#" title="pinterest icon"
+              ><i class="fa fa-pinterest" title="Pinterest"></i
+            ></a>
+          </div>
+          <div class="[ copyright ]">
+            <!-- use div instead of p as min-width for p is set at 12ch; -->
+            <div class="[ copyright__text ]">
+              <span class="[ sr-only ]">Copyright</span>
+              &copy; 2022
+            </div>
+            <div class="[ logo__footer ]">
+              <a href="#"
+                ><img
+                  src="./assets/OR-Logo__lloydlobo.com-20220226180536.png"
+                  alt="Odin Recipes Logo"
+              /></a>
+            </div>
+            <div class="[ copyright__text ]">
+              <a href="#" title="Odin Recipes">Odin Recipes.</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
