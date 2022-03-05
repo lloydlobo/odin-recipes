@@ -829,15 +829,10 @@ footer .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-top: 1px solid var(--grey__3); */
   padding-top: 1em;
   overflow: hidden;
   width: 100%;
   height: auto;
-  /* flex: auto; */
-}
-
-.footer {
   gap: calc(var(--s__300) + 0.382vw);
 }
 
