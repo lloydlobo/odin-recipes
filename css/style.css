@@ -507,7 +507,7 @@ button.navbar__hamburger {
 /* * responsive navbar hamburger menu * */
 /* * * * */
 
-@media (max-width: 48em) {
+@media (max-width: 40em) {
   button.navbar__hamburger {
     display: block;
   }
