@@ -944,10 +944,6 @@ footer a:focus {
   color: red;
 }
 
-.logo__footer img {
-  margin: 0;
-  padding: 0;
-}
 .logo__footer {
   display: flex;
   justify-content: left;
