@@ -900,7 +900,7 @@ footer a:focus {
   align-items: center;
   place-items: first baseline;
   gap: 1em;
-  padding: 1em 0 1.328em 0;
+  padding: 1em 0 1.328em;
   overflow-x: hidden;
 }
 
