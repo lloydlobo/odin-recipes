@@ -15,3 +15,8 @@ Since Odin gives all the food on his table to his wolves, he requires no food. W
 ## Desired Outcomes
 
 People can browse through recipes on the fly.
+
+## Recent Activity
+
+
+![Recent Activity](https://images.repography.com/23914078/lloydlobo/odin-recipes/recent-activity/46f9b5a7de9289ad87519d7f8131bd1f.svg)
