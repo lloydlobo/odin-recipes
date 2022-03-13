@@ -1,0 +1,60 @@
+/* //  */
+/* ! DELETE AFTER TESTING */
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid #ff000060; */
+  --something: --something;
+}
+/* // */
+
+ul.breadcrumbs {
+  display: flex;
+  column-gap: 0.5em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  line-height: 1.7;
+}
+
+ul.breadcrumbs li + li::before {
+  content: "/\00a0"; /* \00a0 is a nonbreakable space. */
+  color: var(--tertiary);
+}
+
+/* * recipe styling */
+
+.recipe.container {
+  display: grid;
+}
+
+/* put ul, o
+l (li) inside the container */
+
+.recipe ul {
+  list-style: inherit;
+  /* list-style-position: inside; */
+  margin-left: 1em;
+}
+
+ol.recipe__steps {
+  list-style: revert;
+  margin-left: 1em;
+  /* list-style-position: inside; */
+}
+
+.recipe li,
+.recipe__steps li {
+  /* margin-left: 1em; */
+  /* min-width: 9ch; */
+  color: var(--secondary);
+}
+
+.recipe__image img {
+  object-fit: cover;
+  min-height: 100%;
+  width: 100%;
+  /* max-width: 100vw; */
+  /* max-width: 45vw; */
+  /* margin: 0 auto;  */
+}
