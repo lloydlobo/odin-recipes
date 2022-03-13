@@ -68,6 +68,9 @@
 
   /* * home section spacing */
   --section-spacing: 1rem;
+
+  /* * something - it does nothing*/
+  --something: something;
 }
 
 /* * md section spacing — large screens */
@@ -177,7 +180,7 @@ h1 {
 h2 {
   /* font-size: var(--fs__800); */
   font-size: clamp(var(--fs__800), 1rem + 10vw, var(--fs__600));
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   margin-bottom: calc(var(--s__400) / var(--s__800));
 }
 /* 37.90px */
@@ -190,14 +193,14 @@ h3 {
 /* 28.43px */
 h4 {
   font-size: var(--fs__600);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   margin-bottom: calc(var(--s__400) / var(--s__600));
   line-height: 1.1;
 }
 /* 21.33px */
 h5 {
   font-size: var(--fs__500);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   margin-bottom: calc(var(--s__400) / var(--s__500));
 }
 
