@@ -915,7 +915,6 @@ footer a:focus {
   display: grid;
   grid-auto-flow: column dense;
   grid-template-columns: repeat(5, auto);
-  gap: var(--fs__200);
   gap: var(--gap, clamp(0.5rem, 0.5rem + 3vw, 4vw));
 }
 
